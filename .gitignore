@@ -1,0 +1,7 @@
+cataract_exp/venv
+venv/
+**/venv/
+.env
+__pycache__/
+*.dylib
+*.so
