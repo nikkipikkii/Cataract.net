@@ -1,0 +1,12 @@
+torch
+torchvision
+timm
+numpy
+Pillow
+gradio
+scikit-learn
+
+
+fastapi
+uvicorn
+python-multipart
