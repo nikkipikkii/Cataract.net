@@ -1041,8 +1041,18 @@ document.querySelectorAll(".fade-up").forEach(el => io.observe(el));
 // ══════════════════════════════════════════
 // STATE
 // ══════════════════════════════════════════
-const API_URL  = "http://127.0.0.1:8000/predict";
-const DEMO_URL = "http://127.0.0.1:8000/demo";
+// const API_URL  = "http://127.0.0.1:8000/predict";
+// const DEMO_URL = "http://127.0.0.1:8000/demo";
+   const API_URL  = "/predict";
+const DEMO_URL = "/demo";
+
+// ─── Render Keep-Alive Health Check ───
+// Pings the backend every 14 minutes while the browser tab is open
+setInterval(() => {
+    fetch('/health')
+        .then(response => console.log("Server keep-alive ping:", response.status))
+        .catch(error => console.error("Server keep-alive failed:", error));
+}, 14 * 60 * 1000);
 
 let currentBlob   = null;
 let activeTab     = "upload";
