@@ -11,6 +11,7 @@ from utils.model_loader import load_model
 from utils.preprocessing import preprocess
 from utils.inference import run_ensemble
 from sanity_check_models import run_sanity_check
+from fastapi.responses import FileResponse
 
 # ─────────────────────────────────────────
 # Device
@@ -280,6 +281,12 @@ def test_response():
 def health():
     return {"status": "ok", "device": str(device)}
 
+
+# serve  model.html
+@app.get("/")
+async def read_index():
+    # Adjust path if main.py is in a subdirectory
+    return FileResponse('../model.html')
 # ─────────────────────────────────────────
 # Entry point
 # ─────────────────────────────────────────
