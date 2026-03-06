@@ -287,6 +287,10 @@ def health():
 async def read_index():
     # Adjust path if main.py is in a subdirectory
     return FileResponse('../model.html')
+@app.get("/index_detailed.html")
+async def read_technical_report():
+    # Make sure this path matches how you point to model.html
+    return FileResponse('../index_detailed.html')
 # ─────────────────────────────────────────
 # Entry point
 # ─────────────────────────────────────────
