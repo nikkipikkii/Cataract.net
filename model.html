@@ -7,110 +7,110 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,700;1,300;1,500&family=Syne:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ══════════════════════════════════════════
-   TOKENS — DARK MODE (default)
+   TOKENS — DARK MODE (default)
 ══════════════════════════════════════════ */
 :root {
-  --ink:      #0a0e17;
-  --ink-2:    #0d1220;
-  --ink-3:    #111825;
-  --paper:    #0a0e17;
-  --paper-2:  #0d1220;
-  --paper-3:  #111825;
-  --accent:   #00d2ff;
-  --accent-2: #0080ff;
-  --accent-glow: rgba(0,210,255,0.4);
-  --text:     #ffffff;
-  --text-2:   #a0aab5;
-  --text-3:   #6b7890;
-  --border:   rgba(0,210,255,0.12);
-  --border-2: rgba(255,255,255,0.06);
-  --sev-high:  #ff4d6d;
-  --sev-mod:   #ffb347;
-  --sev-low:   #7eb8ff;
-  --sev-clear: #00d2a0;
-  --nav-bg: rgba(10,14,23,0.92);
-  --serif: "Fraunces", Georgia, serif;
-  --sans:  "Syne", sans-serif;
-  --mono:  "Fira Code", monospace;
+  --ink:      #0a0e17;
+  --ink-2:    #0d1220;
+  --ink-3:    #111825;
+  --paper:    #0a0e17;
+  --paper-2:  #0d1220;
+  --paper-3:  #111825;
+  --accent:   #00d2ff;
+  --accent-2: #0080ff;
+  --accent-glow: rgba(0,210,255,0.4);
+  --text:     #ffffff;
+  --text-2:   #a0aab5;
+  --text-3:   #6b7890;
+  --border:   rgba(0,210,255,0.12);
+  --border-2: rgba(255,255,255,0.06);
+  --sev-high:  #ff4d6d;
+  --sev-mod:   #ffb347;
+  --sev-low:   #7eb8ff;
+  --sev-clear: #00d2a0;
+  --nav-bg: rgba(10,14,23,0.92);
+  --serif: "Fraunces", Georgia, serif;
+  --sans:  "Syne", sans-serif;
+  --mono:  "Fira Code", monospace;
 }
 
 /* ══════════════════════════════════════════
-   TOKENS — LIGHT MODE
+   TOKENS — LIGHT MODE
 ══════════════════════════════════════════ */
 [data-theme="light"] {
-  --ink:      #f5f7fc;
-  --ink-2:    #eef1f8;
-  --ink-3:    #e6eaf3;
-  --paper:    #f5f7fc;
-  --paper-2:  #eef1f8;
-  --paper-3:  #e6eaf3;
-  --accent:   #0080cc;
-  --accent-2: #005fa3;
-  --accent-glow: rgba(0,128,204,0.25);
-  --text:     #0a0e17;
-  --text-2:   #2e3a4e;
-  --text-3:   #5a6b80;
-  --border:   rgba(0,128,204,0.18);
-  --border-2: rgba(0,0,0,0.08);
-  --nav-bg: rgba(245,247,252,0.94);
-  --sev-high:  #d63355;
-  --sev-mod:   #d4812a;
-  --sev-low:   #3a7fd4;
-  --sev-clear: #00a882;
+  --ink:      #f5f7fc;
+  --ink-2:    #eef1f8;
+  --ink-3:    #e6eaf3;
+  --paper:    #f5f7fc;
+  --paper-2:  #eef1f8;
+  --paper-3:  #e6eaf3;
+  --accent:   #0080cc;
+  --accent-2: #005fa3;
+  --accent-glow: rgba(0,128,204,0.25);
+  --text:     #0a0e17;
+  --text-2:   #2e3a4e;
+  --text-3:   #5a6b80;
+  --border:   rgba(0,128,204,0.18);
+  --border-2: rgba(0,0,0,0.08);
+  --nav-bg: rgba(245,247,252,0.94);
+  --sev-high:  #d63355;
+  --sev-mod:   #d4812a;
+  --sev-low:   #3a7fd4;
+  --sev-clear: #00a882;
 }
-[data-theme="light"] body               { background: #f5f7fc; }
-[data-theme="light"] #home              { background: radial-gradient(circle at top right,#dce8f7 0%,#f5f7fc 60%); }
-[data-theme="light"] .hero-right        { background: radial-gradient(circle at 60% 40%,#cfe0f5 0%,#f0f4fb 70%); }
-[data-theme="light"] .hero-grid-lines   { background-image: linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px); }
+[data-theme="light"] body               { background: #f5f7fc; }
+[data-theme="light"] #home              { background: radial-gradient(circle at top right,#dce8f7 0%,#f5f7fc 60%); }
+[data-theme="light"] .hero-right        { background: radial-gradient(circle at 60% 40%,#cfe0f5 0%,#f0f4fb 70%); }
+[data-theme="light"] .hero-grid-lines   { background-image: linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px); }
 [data-theme="light"] .hero-corner-label { color: rgba(0,0,0,0.3); }
-[data-theme="light"] .hero-title        { background: linear-gradient(135deg,#0a0e17 40%,#1a5fa0 75%,#0080cc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-[data-theme="light"] .screen-title      { background: linear-gradient(135deg,#0a0e17 40%,#1a5fa0 75%,#0080cc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-[data-theme="light"] #progression       { background: #eef1f8; }
-[data-theme="light"] .prog-h2           { color: #1a2332; }
-[data-theme="light"] .prog-intro-body   { color: rgba(26,35,50,0.6); }
+[data-theme="light"] .hero-title        { background: linear-gradient(135deg,#0a0e17 40%,#1a5fa0 75%,#0080cc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+[data-theme="light"] .screen-title      { background: linear-gradient(135deg,#0a0e17 40%,#1a5fa0 75%,#0080cc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+[data-theme="light"] #progression       { background: #eef1f8; }
+[data-theme="light"] .prog-h2           { color: #1a2332; }
+[data-theme="light"] .prog-intro-body   { color: rgba(26,35,50,0.6); }
 [data-theme="light"] .scroll-step-title { color: #1a2332; }
-[data-theme="light"] .scroll-step-body  { color: rgba(26,35,50,0.6); }
-[data-theme="light"] .prog-sticky       { border-right-color: rgba(0,0,0,0.08); }
-[data-theme="light"] .upload-panel      { background: rgba(238,241,248,0.9); }
-[data-theme="light"] .result-panel      { background: rgba(230,234,243,0.95); }
-[data-theme="light"] .result-footer     { background: rgba(0,0,0,0.04); }
+[data-theme="light"] .scroll-step-body  { color: rgba(26,35,50,0.6); }
+[data-theme="light"] .prog-sticky       { border-right-color: rgba(0,0,0,0.08); }
+[data-theme="light"] .upload-panel      { background: rgba(238,241,248,0.9); }
+[data-theme="light"] .result-panel      { background: rgba(230,234,243,0.95); }
+[data-theme="light"] .result-footer     { background: rgba(0,0,0,0.04); }
 [data-theme="light"] .result-assessment { color: #0a0e17; }
 [data-theme="light"] .result-placeholder h4 { color: #2e3a4e; }
-[data-theme="light"] .res-block-value   { background: rgba(0,0,0,0.03); }
-[data-theme="light"] .conf-track        { background: rgba(0,0,0,0.08); }
-[data-theme="light"] .decision-body     { background: rgba(0,128,204,0.04); }
-[data-theme="light"] .warning-bar       { background: rgba(212,129,42,0.06); border-color: rgba(212,129,42,0.25); }
-[data-theme="light"] .screen-grid       { background: rgba(0,128,204,0.06); border-color: rgba(0,128,204,0.15); }
-[data-theme="light"] #screening         { background: radial-gradient(circle at 80% 20%,#d0e4f5 0%,#f5f7fc 55%); }
-[data-theme="light"] .mode-switcher     { background: rgba(0,0,0,0.04); }
-[data-theme="light"] .tab-bar           { background: rgba(0,0,0,0.03); }
-[data-theme="light"] .drop-zone         { background: rgba(0,128,204,0.02); border-color: rgba(0,128,204,0.2); }
-[data-theme="light"] .drop-zone:hover   { background: rgba(0,128,204,0.06); }
-[data-theme="light"] .author-card       { background: rgba(0,128,204,0.04); }
-[data-theme="light"] .demo-note         { background: rgba(0,128,204,0.05); }
-[data-theme="light"] .demo-cat-btn      { background: rgba(0,0,0,0.02); color: #2e3a4e; }
+[data-theme="light"] .res-block-value   { background: rgba(0,0,0,0.03); }
+[data-theme="light"] .conf-track        { background: rgba(0,0,0,0.08); }
+[data-theme="light"] .decision-body     { background: rgba(0,128,204,0.04); }
+[data-theme="light"] .warning-bar       { background: rgba(212,129,42,0.06); border-color: rgba(212,129,42,0.25); }
+[data-theme="light"] .screen-grid       { background: rgba(0,128,204,0.06); border-color: rgba(0,128,204,0.15); }
+[data-theme="light"] #screening         { background: radial-gradient(circle at 80% 20%,#d0e4f5 0%,#f5f7fc 55%); }
+[data-theme="light"] .mode-switcher     { background: rgba(0,0,0,0.04); }
+[data-theme="light"] .tab-bar           { background: rgba(0,0,0,0.03); }
+[data-theme="light"] .drop-zone         { background: rgba(0,128,204,0.02); border-color: rgba(0,128,204,0.2); }
+[data-theme="light"] .drop-zone:hover   { background: rgba(0,128,204,0.06); }
+[data-theme="light"] .author-card       { background: rgba(0,128,204,0.04); }
+[data-theme="light"] .demo-note         { background: rgba(0,128,204,0.05); }
+[data-theme="light"] .demo-cat-btn      { background: rgba(0,0,0,0.02); color: #2e3a4e; }
 [data-theme="light"] .demo-cat-btn:hover{ background: rgba(0,128,204,0.06); }
-[data-theme="light"] .img-preview-wrap  { background: #e6eaf3; }
-[data-theme="light"] .guide-section     { background: #eef1f8; }
-[data-theme="light"] .guide-card        { background: #f5f7fc; }
-[data-theme="light"] .guide-card:hover  { background: rgba(0,128,204,0.05); }
-[data-theme="light"] .guide-card-title  { color: #0a0e17; }
-[data-theme="light"] .eye-float-card    { background: rgba(238,241,248,0.92); }
+[data-theme="light"] .img-preview-wrap  { background: #e6eaf3; }
+[data-theme="light"] .guide-section     { background: #eef1f8; }
+[data-theme="light"] .guide-card        { background: #f5f7fc; }
+[data-theme="light"] .guide-card:hover  { background: rgba(0,128,204,0.05); }
+[data-theme="light"] .guide-card-title  { color: #0a0e17; }
+[data-theme="light"] .eye-float-card    { background: rgba(238,241,248,0.92); }
 
 /* ══════════════════════════════════════════
-   THEME TOGGLE BUTTON
+   THEME TOGGLE BUTTON
 ══════════════════════════════════════════ */
 .theme-toggle {
-  display: flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; border-radius: 50%;
-  border: 1px solid var(--border); background: transparent;
-  cursor: pointer; color: var(--text-3); transition: all 0.25s;
-  margin-left: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--border); background: transparent;
+  cursor: pointer; color: var(--text-3); transition: all 0.25s;
+  margin-left: 8px; flex-shrink: 0;
 }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,128,204,0.08); }
-.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-sun  { display: none; }
 .theme-toggle .icon-moon { display: block; }
-[data-theme="light"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="light"] .theme-toggle .icon-sun  { display: block; }
 [data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -118,146 +118,146 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--sans); background: var(--paper); color: var(--text); line-height: 1.65; min-height: 100vh; transition: background 0.3s, color 0.3s; }
 
 /* ══════════════════════════════════════════
-   NAV
+   NAV
 ══════════════════════════════════════════ */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-  background: var(--nav-bg); backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 7%; height: 60px;
-  box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  background: var(--nav-bg); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 7%; height: 60px;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.4);
 }
 .nav-logo {
-  font-family: var(--serif); font-size: 1.28rem; font-weight: 500;
-  color: var(--accent); text-decoration: none;
-  display: flex; align-items: center; gap: 9px; letter-spacing: -0.01em;
+  font-family: var(--serif); font-size: 1.28rem; font-weight: 500;
+  color: var(--accent); text-decoration: none;
+  display: flex; align-items: center; gap: 9px; letter-spacing: -0.01em;
 }
 .nav-logo-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent); display: inline-block;
-  animation: pulse 2.5s ease-in-out infinite;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); display: inline-block;
+  animation: pulse 2.5s ease-in-out infinite;
 }
 @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:0.6} }
 .nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links a {
-  font-size: 0.91rem; font-weight: 500; color: var(--text-3);
-  text-decoration: none; padding: 6px 14px; border-radius: 30px;
-  transition: all 0.2s; letter-spacing: 0.02em;
+  font-size: 0.91rem; font-weight: 500; color: var(--text-3);
+  text-decoration: none; padding: 6px 14px; border-radius: 30px;
+  transition: all 0.2s; letter-spacing: 0.02em;
 }
 .nav-links a:hover { color: var(--accent); background: rgba(0,210,255,0.08); }
 .nav-links a.active { color: var(--accent); background: rgba(0,210,255,0.08); }
 .nav-pill {
-  font-size: 0.88rem; font-weight: 600;
-  background: rgba(0,210,255,0.1); color: var(--accent);
-  border: 1px solid rgba(0,210,255,0.3);
-  padding: 7px 18px; border-radius: 40px;
-  text-decoration: none; letter-spacing: 0.03em; transition: all 0.25s;
+  font-size: 0.88rem; font-weight: 600;
+  background: rgba(0,210,255,0.1); color: var(--accent);
+  border: 1px solid rgba(0,210,255,0.3);
+  padding: 7px 18px; border-radius: 40px;
+  text-decoration: none; letter-spacing: 0.03em; transition: all 0.25s;
 }
 .nav-pill:hover { background: var(--accent); color: var(--ink-2); transform: translateY(-1px); }
 
 /* ══════════════════════════════════════════
-   HERO
+   HERO
 ══════════════════════════════════════════ */
 #home {
-  min-height: 100vh; padding: 60px 7% 0;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0; position: relative; overflow: hidden;
-  background: radial-gradient(circle at top right, #1a233a 0%, var(--ink) 60%);
+  min-height: 100vh; padding: 60px 7% 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; position: relative; overflow: hidden;
+  background: radial-gradient(circle at top right, #1a233a 0%, var(--ink) 60%);
 }
 .hero-left {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 80px 60px 80px 0; border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 60px 80px 0; border-right: 1px solid var(--border);
 }
 .hero-eyebrow {
-  font-family: var(--mono); font-size: 0.81rem; color: var(--accent);
-  letter-spacing: 0.15em; text-transform: uppercase;
-  display: flex; align-items: center; gap: 10px; margin-bottom: 28px;
+  font-family: var(--mono); font-size: 0.81rem; color: var(--accent);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 10px; margin-bottom: 28px;
 }
 .hero-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
 .hero-title {
-  font-family: var(--serif); font-size: clamp(3.0rem, 5.2vw, 4.6rem);
-  font-weight: 300; line-height: 1.07; letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #fff 40%, #a5d8ff 75%, var(--accent));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  margin-bottom: 28px;
+  font-family: var(--serif); font-size: clamp(3.0rem, 5.2vw, 4.6rem);
+  font-weight: 300; line-height: 1.07; letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #fff 40%, #a5d8ff 75%, var(--accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 28px;
 }
 .hero-title em { font-style: italic; }
 .hero-body { font-size: 1.08rem; color: var(--text-2); max-width: 440px; line-height: 1.8; margin-bottom: 40px; }
 .hero-cta-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .btn-primary {
-  background: transparent; color: var(--accent); border: 2px solid var(--accent);
-  font-family: var(--sans); font-size: 0.95rem; font-weight: 600;
-  padding: 13px 28px; border-radius: 40px; cursor: pointer;
-  text-decoration: none; display: inline-block; letter-spacing: 0.05em; transition: all 0.25s;
+  background: transparent; color: var(--accent); border: 2px solid var(--accent);
+  font-family: var(--sans); font-size: 0.95rem; font-weight: 600;
+  padding: 13px 28px; border-radius: 40px; cursor: pointer;
+  text-decoration: none; display: inline-block; letter-spacing: 0.05em; transition: all 0.25s;
 }
 .btn-primary:hover { background: var(--accent); color: var(--ink-2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,210,255,0.3); }
 .btn-ghost {
-  font-size: 0.95rem; font-weight: 500; color: var(--text-3);
-  text-decoration: none; letter-spacing: 0.02em;
-  display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+  font-size: 0.95rem; font-weight: 500; color: var(--text-3);
+  text-decoration: none; letter-spacing: 0.02em;
+  display: flex; align-items: center; gap: 6px; transition: color 0.2s;
 }
 .btn-ghost:hover { color: var(--text); }
 .btn-ghost svg { transition: transform 0.2s; }
 .btn-ghost:hover svg { transform: translateX(3px); }
 
 .hero-stats {
-  display: flex; gap: 40px; margin-top: 56px;
-  padding-top: 32px; border-top: 1px solid var(--border); flex-wrap: wrap;
+  display: flex; gap: 40px; margin-top: 56px;
+  padding-top: 32px; border-top: 1px solid var(--border); flex-wrap: wrap;
 }
-.hstat-val   { font-family: var(--serif); font-size: 2rem; font-weight: 500; color: var(--accent); display: block; line-height: 1; }
+.hstat-val   { font-family: var(--serif); font-size: 2rem; font-weight: 500; color: var(--accent); display: block; line-height: 1; }
 .hstat-label { font-family: var(--mono); font-size: 0.75rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 5px; display: block; }
 
 /* Author card */
 .author-card {
-  margin-top: 32px; padding: 20px 24px;
-  border: 1px solid var(--border); border-radius: 12px;
-  background: rgba(0,210,255,0.03);
-  display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 20px; flex-wrap: wrap; transition: background 0.3s;
+  margin-top: 32px; padding: 20px 24px;
+  border: 1px solid var(--border); border-radius: 12px;
+  background: rgba(0,210,255,0.03);
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap; transition: background 0.3s;
 }
-.author-info  { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 200px; }
-.author-by    { font-family: var(--mono); font-size: 0.73rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; }
-.author-name  { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--accent); letter-spacing: -0.01em; }
-.author-role  { font-size: 0.84rem; color: var(--text-3); line-height: 1.6; max-width: 380px; }
+.author-info  { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 200px; }
+.author-by    { font-family: var(--mono); font-size: 0.73rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; }
+.author-name  { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--accent); letter-spacing: -0.01em; }
+.author-role  { font-size: 0.84rem; color: var(--text-3); line-height: 1.6; max-width: 380px; }
 .author-links { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: 4px; }
 .author-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 7px 14px; border-radius: 30px;
-  border: 1px solid var(--border-2);
-  font-family: var(--sans); font-size: 0.84rem; font-weight: 500;
-  color: var(--text-3); text-decoration: none; transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: 30px;
+  border: 1px solid var(--border-2);
+  font-family: var(--sans); font-size: 0.84rem; font-weight: 500;
+  color: var(--text-3); text-decoration: none; transition: all 0.2s;
 }
 .author-link:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,210,255,0.06); }
 .author-link svg { flex-shrink: 0; }
 
 /* Hero right */
 .hero-right {
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-  background: radial-gradient(circle at 60% 40%, #131e38 0%, var(--ink) 70%);
-  padding: 80px 40px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  background: radial-gradient(circle at 60% 40%, #131e38 0%, var(--ink) 70%);
+  padding: 80px 40px;
 }
 .eye-scene { position: relative; width: 260px; height: 260px; display: flex; align-items: center; justify-content: center; }
 .eye-orbit {
-  width: 260px; height: 260px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.08); position: absolute;
-  animation: orbit-spin 12s linear infinite;
+  width: 260px; height: 260px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08); position: absolute;
+  animation: orbit-spin 12s linear infinite;
 }
 .eye-orbit:nth-child(2) { width: 200px; height: 200px; animation-direction: reverse; animation-duration: 8s; border-color: rgba(0,128,255,0.2); }
 @keyframes orbit-spin { to { transform: rotate(360deg); } }
 .eye-socket {
-  width: 190px; height: 190px; border-radius: 50%;
-  background: radial-gradient(circle at 38% 35%, #e8e0d5 0%, #c4bcb0 50%, #9a9289 100%);
-  position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 0 0 12px rgba(0,210,255,0.04), 0 0 60px rgba(0,210,255,0.2);
+  width: 190px; height: 190px; border-radius: 50%;
+  background: radial-gradient(circle at 38% 35%, #e8e0d5 0%, #c4bcb0 50%, #9a9289 100%);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 12px rgba(0,210,255,0.04), 0 0 60px rgba(0,210,255,0.2);
 }
 .eye-iris {
-  width: 90px; height: 90px; border-radius: 50%;
-  background: radial-gradient(circle at 40% 35%, #000814 0%, #001a4d 35%, #0050a0 60%, #00d2ff 100%);
-  position: relative; z-index: 2; transition: transform 0.07s ease-out;
-  box-shadow: 0 0 20px rgba(0,210,255,0.4);
+  width: 90px; height: 90px; border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #000814 0%, #001a4d 35%, #0050a0 60%, #00d2ff 100%);
+  position: relative; z-index: 2; transition: transform 0.07s ease-out;
+  box-shadow: 0 0 20px rgba(0,210,255,0.4);
 }
 .eye-iris::after { content: ""; position: absolute; top: 18%; left: 22%; width: 20px; height: 20px; background: rgba(255,255,255,0.9); border-radius: 50%; }
 .eye-pupil { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 36px; height: 36px; background: #0a0a0a; border-radius: 50%; z-index: 3; }
@@ -266,33 +266,33 @@ nav {
 
 /* Floating stat cards */
 .eye-float-card {
-  position: absolute;
-  background: rgba(13,18,32,0.85);
-  border: 1px solid var(--border);
-  border-radius: 10px; padding: 10px 14px;
-  backdrop-filter: blur(12px);
-  display: flex; flex-direction: column; gap: 3px;
-  min-width: 130px; transition: background 0.3s;
+  position: absolute;
+  background: rgba(13,18,32,0.85);
+  border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 14px;
+  backdrop-filter: blur(12px);
+  display: flex; flex-direction: column; gap: 3px;
+  min-width: 130px; transition: background 0.3s;
 }
-.eye-float-card.top-left  { top: 18%; left: 6%; }
+.eye-float-card.top-left  { top: 18%; left: 6%; }
 .eye-float-card.top-right { top: 12%; right: 6%; }
-.eye-float-card.bot-left  { bottom: 18%; left: 6%; }
+.eye-float-card.bot-left  { bottom: 18%; left: 6%; }
 .eye-float-card.bot-right { bottom: 12%; right: 6%; }
-.efc-val   { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--accent); line-height: 1; }
+.efc-val   { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--accent); line-height: 1; }
 .efc-label { font-family: var(--mono); font-size: 0.71rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
 .efc-badge { font-family: var(--mono); font-size: 0.71rem; color: var(--accent); background: rgba(0,210,255,0.08); border: 1px solid rgba(0,210,255,0.2); border-radius: 20px; padding: 2px 8px; margin-top: 4px; display: inline-block; }
 
 .hero-grid-lines {
-  position: absolute; inset: 0; pointer-events: none;
-  background-image: linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
-  background-size: 50px 50px;
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size: 50px 50px;
 }
 .hero-corner-label { position: absolute; font-family: var(--mono); font-size: 0.71rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; text-transform: uppercase; }
 .hero-corner-label.tl { top: 20px; left: 20px; }
 .hero-corner-label.br { bottom: 20px; right: 20px; text-align: right; }
 
 /* ══════════════════════════════════════════
-   PROGRESSION
+   PROGRESSION
 ══════════════════════════════════════════ */
 #progression { background: var(--ink); color: var(--paper); display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
 .prog-sticky { position: sticky; top: 60px; height: calc(100vh - 60px); display: flex; align-items: center; justify-content: center; overflow: hidden; border-right: 1px solid rgba(255,255,255,0.06); }
@@ -315,34 +315,34 @@ nav {
 .scroll-step-body { font-size: 0.96rem; color: rgba(240,236,230,0.55); line-height: 1.75; }
 
 /* ══════════════════════════════════════════
-   SCREENING
+   SCREENING
 ══════════════════════════════════════════ */
 #screening { background: radial-gradient(circle at 80% 20%, #131e38 0%, var(--ink) 55%); padding: 100px 7% 80px; position: relative; overflow: hidden; }
 .screen-intro { margin-bottom: 56px; }
 .screen-eyebrow { font-family: var(--mono); font-size: 0.80rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
 .screen-eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--accent); }
 .screen-title {
-  font-family: var(--serif); font-size: clamp(2.4rem, 4.2vw, 3.6rem);
-  font-weight: 300; line-height: 1.1; letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #fff 40%, #a5d8ff 75%, var(--accent));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px;
+  font-family: var(--serif); font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+  font-weight: 300; line-height: 1.1; letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fff 40%, #a5d8ff 75%, var(--accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px;
 }
 .screen-sub { font-size: 1.03rem; color: var(--text-2); max-width: 520px; line-height: 1.8; }
 .screen-grid {
-  display: grid; grid-template-columns: 5fr 6fr;
-  gap: 1px; background: rgba(0,210,255,0.08);
-  border: 1px solid rgba(0,210,255,0.1); border-radius: 16px; overflow: hidden;
-  box-shadow: 0 0 60px rgba(0,0,0,0.4);
+  display: grid; grid-template-columns: 5fr 6fr;
+  gap: 1px; background: rgba(0,210,255,0.08);
+  border: 1px solid rgba(0,210,255,0.1); border-radius: 16px; overflow: hidden;
+  box-shadow: 0 0 60px rgba(0,0,0,0.4);
 }
 
 .mode-switcher { display: flex; border-bottom: 1px solid var(--border-2); background: rgba(0,0,0,0.3); }
 .mode-btn {
-  flex: 1; padding: 13px 8px; background: none; border: none;
-  font-family: var(--sans); font-size: 0.84rem; font-weight: 500;
-  color: var(--text-3); cursor: pointer;
-  display: flex; align-items: center; justify-content: center; gap: 7px;
-  border-bottom: 2px solid transparent; transition: all 0.22s;
-  letter-spacing: 0.01em; line-height: 1.3; text-align: center;
+  flex: 1; padding: 13px 8px; background: none; border: none;
+  font-family: var(--sans); font-size: 0.84rem; font-weight: 500;
+  color: var(--text-3); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  border-bottom: 2px solid transparent; transition: all 0.22s;
+  letter-spacing: 0.01em; line-height: 1.3; text-align: center;
 }
 .mode-btn:hover { color: var(--text-2); }
 .mode-btn.active { color: var(--accent); border-bottom-color: var(--accent); background: rgba(0,210,255,0.04); }
@@ -351,11 +351,11 @@ nav {
 .demo-label { font-family: var(--mono); font-size: 0.75rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
 .demo-categories { display: flex; flex-direction: column; gap: 6px; }
 .demo-cat-btn {
-  width: 100%; padding: 10px 14px; text-align: left;
-  background: rgba(255,255,255,0.03); border: 1px solid var(--border-2);
-  border-radius: 8px; font-family: var(--sans); font-size: 0.91rem;
-  font-weight: 500; color: var(--text-2); cursor: pointer; transition: all 0.2s;
-  letter-spacing: 0.01em; display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 10px 14px; text-align: left;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-2);
+  border-radius: 8px; font-family: var(--sans); font-size: 0.91rem;
+  font-weight: 500; color: var(--text-2); cursor: pointer; transition: all 0.2s;
+  letter-spacing: 0.01em; display: flex; align-items: center; gap: 8px;
 }
 .demo-cat-btn::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--border-2); flex-shrink: 0; transition: background 0.2s; }
 .demo-cat-btn:hover { border-color: rgba(0,210,255,0.2); color: var(--text); background: rgba(0,210,255,0.04); }
@@ -365,11 +365,11 @@ nav {
 .upload-panel { background: rgba(13,18,32,0.8); padding: 0; }
 .tab-bar { display: flex; border-bottom: 1px solid var(--border-2); background: rgba(0,0,0,0.2); }
 .tab-btn {
-  flex: 1; padding: 14px 8px; background: none; border: none;
-  font-family: var(--sans); font-size: 0.87rem; font-weight: 500;
-  color: var(--text-3); cursor: pointer;
-  display: flex; align-items: center; justify-content: center; gap: 7px;
-  border-bottom: 2px solid transparent; transition: all 0.22s; letter-spacing: 0.02em;
+  flex: 1; padding: 14px 8px; background: none; border: none;
+  font-family: var(--sans); font-size: 0.87rem; font-weight: 500;
+  color: var(--text-3); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  border-bottom: 2px solid transparent; transition: all 0.22s; letter-spacing: 0.02em;
 }
 .tab-btn:hover { color: var(--text-2); }
 .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); background: rgba(0,210,255,0.04); }
@@ -377,9 +377,9 @@ nav {
 .tab-pane.active { display: block; }
 
 .drop-zone {
-  border: 1.5px dashed rgba(0,210,255,0.2); border-radius: 10px;
-  padding: 40px 16px; text-align: center; cursor: pointer;
-  transition: all 0.25s; background: rgba(0,210,255,0.02); position: relative;
+  border: 1.5px dashed rgba(0,210,255,0.2); border-radius: 10px;
+  padding: 40px 16px; text-align: center; cursor: pointer;
+  transition: all 0.25s; background: rgba(0,210,255,0.02); position: relative;
 }
 .drop-zone:hover, .drop-zone.dragover { border-color: var(--accent); background: rgba(0,210,255,0.06); box-shadow: 0 0 30px rgba(0,210,255,0.08); }
 .drop-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
@@ -391,10 +391,10 @@ nav {
 .dz-tag { font-family: var(--mono); font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-3); letter-spacing: 0.05em; border: 1px solid var(--border-2); }
 
 .paste-zone {
-  border: 1.5px dashed rgba(0,210,255,0.2); border-radius: 10px;
-  padding: 44px 16px; text-align: center; cursor: pointer;
-  background: rgba(0,210,255,0.02); outline: none; transition: all 0.25s;
-  min-height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 1.5px dashed rgba(0,210,255,0.2); border-radius: 10px;
+  padding: 44px 16px; text-align: center; cursor: pointer;
+  background: rgba(0,210,255,0.02); outline: none; transition: all 0.25s;
+  min-height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
 .paste-zone:focus, .paste-zone.focused { border-color: var(--accent); background: rgba(0,210,255,0.06); box-shadow: 0 0 0 3px rgba(0,210,255,0.1); }
 .kbd-chip { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-2); padding: 4px 12px; border-radius: 6px; font-family: var(--mono); font-size: 0.84rem; color: var(--text-3); }
@@ -429,7 +429,7 @@ nav {
 .warning-bar svg { flex-shrink: 0; margin-top: 1px; }
 
 /* ══════════════════════════════════════════
-   RESULT PANEL
+   RESULT PANEL
 ══════════════════════════════════════════ */
 .result-panel { background: rgba(11,15,26,0.9); padding: 0; display: flex; flex-direction: column; }
 .result-inner { padding: 32px; flex: 1; }
@@ -437,7 +437,7 @@ nav {
 .placeholder-ring { width: 72px; height: 72px; border-radius: 50%; border: 1.5px dashed rgba(0,210,255,0.2); display: flex; align-items: center; justify-content: center; }
 .placeholder-ring svg { opacity: 0.35; }
 .result-placeholder h4 { font-size: 1.03rem; font-weight: 600; color: var(--text-2); }
-.result-placeholder p  { font-size: 0.91rem; color: var(--text-3); max-width: 220px; line-height: 1.6; }
+.result-placeholder p  { font-size: 0.91rem; color: var(--text-3); max-width: 220px; line-height: 1.6; }
 .result-output { display: none; }
 .result-output.visible { display: block; }
 
@@ -481,7 +481,7 @@ nav {
 .result-footer { padding: 16px 32px; border-top: 1px solid var(--border-2); font-size: 0.82rem; color: var(--text-3); line-height: 1.6; display: flex; gap: 8px; align-items: flex-start; background: rgba(0,0,0,0.2); }
 
 /* ══════════════════════════════════════════
-   GUIDE
+   GUIDE
 ══════════════════════════════════════════ */
 .guide-section { padding: 60px 7% 80px; background: var(--ink-2); color: var(--text); }
 .guide-header { margin-bottom: 40px; }
@@ -502,26 +502,26 @@ nav {
 .fade-up.in { opacity: 1; transform: none; }
 
 /* ══════════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE
 ══════════════════════════════════════════ */
 @media (max-width: 960px) {
-  #home { grid-template-columns: 1fr; padding-top: 60px; }
-  .hero-left { padding: 60px 0 40px; border-right: none; border-bottom: 1px solid var(--border); }
-  .hero-right { min-height: 360px; }
-  .eye-float-card { display: none; }
-  .screen-grid { grid-template-columns: 1fr; }
-  .guide-grid { grid-template-columns: 1fr 1fr; }
-  #progression { grid-template-columns: 1fr; }
-  .prog-sticky { position: relative; height: 40vh; }
+  #home { grid-template-columns: 1fr; padding-top: 60px; }
+  .hero-left { padding: 60px 0 40px; border-right: none; border-bottom: 1px solid var(--border); }
+  .hero-right { min-height: 360px; }
+  .eye-float-card { display: none; }
+  .screen-grid { grid-template-columns: 1fr; }
+  .guide-grid { grid-template-columns: 1fr 1fr; }
+  #progression { grid-template-columns: 1fr; }
+  .prog-sticky { position: relative; height: 40vh; }
 }
 @media (max-width: 600px) {
-  .guide-grid { grid-template-columns: 1fr; }
-  nav { padding: 0 5%; }
-  #screening, .guide-section { padding-left: 5%; padding-right: 5%; }
-  #home { padding-left: 5%; padding-right: 5%; }
-  .hero-left { padding: 50px 0 40px; }
-  .prog-right-col { padding: 40px 24px; }
-  .author-card { flex-direction: column; }
+  .guide-grid { grid-template-columns: 1fr; }
+  nav { padding: 0 5%; }
+  #screening, .guide-section { padding-left: 5%; padding-right: 5%; }
+  #home { padding-left: 5%; padding-right: 5%; }
+  .hero-left { padding: 50px 0 40px; }
+  .prog-right-col { padding: 40px 24px; }
+  .author-card { flex-direction: column; }
 }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--paper); }
@@ -530,660 +530,655 @@ nav {
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a href="#home" class="nav-logo">
-    <span class="nav-logo-dot"></span>
-    CataractNet
-  </a>
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#progression">Progression</a>
-    <a href="#screening" class="active">Screen</a>
-    <a href="index_detailed.html" class="nav-pill">Technical Report ↗</a>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
-      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-      </svg>
-      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"/>
-        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-      </svg>
-    </button>
-  </div>
+  <a href="#home" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    CataractNet
+  </a>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#progression">Progression</a>
+    <a href="#screening" class="active">Screen</a>
+    <a href="index_detailed.html" class="nav-pill">Technical Report ↗</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+  </div>
 </nav>
 
-<!-- HERO -->
 <section id="home">
-  <div class="hero-left fade-up">
-    <div class="hero-eyebrow">AI for Healthcare · Research 2026</div>
-    <h1 class="hero-title">Accessible eye<br>screening for<br><em>everyone.</em></h1>
-    <p class="hero-body">A calibrated deep-learning ensemble detecting cataracts from standard photography. Built for real-world, resource-limited screening environments using the CMPD dataset.</p>
-    <div class="hero-cta-row">
-      <a href="#screening" class="btn-primary">Try the Screening Tool</a>
-      <a href="#progression" class="btn-ghost">
-        Explore progression
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><span class="hstat-val">0.838</span><span class="hstat-label">Binary ROC-AUC</span></div>
-      <div class="hstat"><span class="hstat-val">93%</span><span class="hstat-label">Immature Recall</span></div>
-      <div class="hstat"><span class="hstat-val">2,876</span><span class="hstat-label">Training Images</span></div>
-      <div class="hstat"><span class="hstat-val">79.8%</span><span class="hstat-label">IOL Accuracy</span></div>
-    </div>
+  <div class="hero-left fade-up">
+    <div class="hero-eyebrow">AI for Healthcare · Research 2026</div>
+    <h1 class="hero-title">Accessible eye<br>screening for<br><em>everyone.</em></h1>
+    <p class="hero-body">A calibrated deep-learning ensemble detecting cataracts from standard photography. Built for real-world, resource-limited screening environments using the CMPD dataset.</p>
+    <div class="hero-cta-row">
+      <a href="#screening" class="btn-primary">Try the Screening Tool</a>
+      <a href="#progression" class="btn-ghost">
+        Explore progression
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-val">0.838</span><span class="hstat-label">Binary ROC-AUC</span></div>
+      <div class="hstat"><span class="hstat-val">93%</span><span class="hstat-label">Immature Recall</span></div>
+      <div class="hstat"><span class="hstat-val">2,876</span><span class="hstat-label">Training Images</span></div>
+      <div class="hstat"><span class="hstat-val">79.8%</span><span class="hstat-label">IOL Accuracy</span></div>
+    </div>
 
-    <div class="author-card">
-      <div class="author-info">
-        <span class="author-by">Project by</span>
-        <span class="author-name">Nandini</span>
-        <span class="author-role">My work includes breast cancer survival analysis using Cox proportional hazards and Random Survival Forests, with external validation across TCGA and METABRIC cohorts. I've also built applied ML systems such as CNN-based cataract detection and survival modeling pipelines for risk stratification and model interpretability.</span>
-        
-      </div>
-      <div class="author-links">
-        <a href="https://www.linkedin.com/in/nandini-s-73b3953a5/" target="_blank" rel="noopener" class="author-link">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          Nandini's LinkedIn
-        </a>
-        <a href="https://onco-survival-ml-front-end.vercel.app/interactive-landing-hub" target="_blank" rel="noopener" class="author-link">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          OncoSurvivalML ↗
-        </a>
-                <a href="https://onco-survival-ml-front-end.vercel.app/interactive-landing-hub" target="_blank" rel="noopener" class="author-link">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Nandini's Portfolio ↗
-        </a>
-      </div>
-    </div>
+    <div class="author-card">
+      <div class="author-info">
+        <span class="author-by">Project by</span>
+        <span class="author-name">Nandini</span>
+        <span class="author-role">My work includes breast cancer survival analysis using Cox proportional hazards and Random Survival Forests, with external validation across TCGA and METABRIC cohorts. I've also built applied ML systems such as CNN-based cataract detection and survival modeling pipelines for risk stratification and model interpretability.</span>
+        
+      </div>
+      <div class="author-links">
+        <a href="https://www.linkedin.com/in/nandini-s-73b3953a5/" target="_blank" rel="noopener" class="author-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          Nandini's LinkedIn
+        </a>
+        <a href="https://onco-survival-ml-front-end.vercel.app/interactive-landing-hub" target="_blank" rel="noopener" class="author-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          OncoSurvivalML ↗
+        </a>
+                <a href="https://onco-survival-ml-front-end.vercel.app/interactive-landing-hub" target="_blank" rel="noopener" class="author-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Nandini's Portfolio ↗
+        </a>
+      </div>
+    </div>
 
-    <div class="author-card">
-      <div class="author-info">
-        <span class="author-by">Website Developed by</span>
-        <span class="author-name">Trishna Grewal</span>
-        <span class="author-role">She is a builder and love to participate in hackathons.</span>
-        
-      </div>
-      <div class="author-links">
-        <a href="https://www.linkedin.com/in/trishnagrewal/" target="_blank" rel="noopener" class="author-link">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          Trishna's LinkedIn
-        </a>
-        
-      </div>
-    </div>
-  </div>
+    <div class="author-card">
+      <div class="author-info">
+        <span class="author-by">Website Developed by</span>
+        <span class="author-name">Trishna Grewal</span>
+        <span class="author-role">She is a builder and love to participate in hackathons.</span>
+        
+      </div>
+      <div class="author-links">
+        <a href="https://www.linkedin.com/in/trishnagrewal/" target="_blank" rel="noopener" class="author-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          Trishna's LinkedIn
+        </a>
+        
+      </div>
+    </div>
+  </div>
 
-  <div class="hero-right">
-    <div class="hero-grid-lines"></div>
-    <span class="hero-corner-label tl">FUNDUS · SLIT-LAMP</span>
-    <span class="hero-corner-label br">AI ENSEMBLE v1.0</span>
+  <div class="hero-right">
+    <div class="hero-grid-lines"></div>
+    <span class="hero-corner-label tl">FUNDUS · SLIT-LAMP</span>
+    <span class="hero-corner-label br">AI ENSEMBLE v1.0</span>
 
-    <div class="eye-float-card top-left">
-      <span class="efc-val">0.838</span>
-      <span class="efc-label">ROC-AUC Score</span>
-      <span class="efc-badge">Binary Classifier</span>
-    </div>
-    <div class="eye-float-card top-right">
-      <span class="efc-val">93%</span>
-      <span class="efc-label">Immature Recall</span>
-      <span class="efc-badge">Sensitivity</span>
-    </div>
-    <div class="eye-float-card bot-left">
-      <span class="efc-val">2,876</span>
-      <span class="efc-label">Training Images</span>
-      <span class="efc-badge">CMPD Dataset</span>
-    </div>
-    <div class="eye-float-card bot-right">
-      <span class="efc-val">79.8%</span>
-      <span class="efc-label">IOL Accuracy</span>
-      <span class="efc-badge">Lens Detection</span>
-    </div>
+    <div class="eye-float-card top-left">
+      <span class="efc-val">0.838</span>
+      <span class="efc-label">ROC-AUC Score</span>
+      <span class="efc-badge">Binary Classifier</span>
+    </div>
+    <div class="eye-float-card top-right">
+      <span class="efc-val">93%</span>
+      <span class="efc-label">Immature Recall</span>
+      <span class="efc-badge">Sensitivity</span>
+    </div>
+    <div class="eye-float-card bot-left">
+      <span class="efc-val">2,876</span>
+      <span class="efc-label">Training Images</span>
+      <span class="efc-badge">CMPD Dataset</span>
+    </div>
+    <div class="eye-float-card bot-right">
+      <span class="efc-val">79.8%</span>
+      <span class="efc-label">IOL Accuracy</span>
+      <span class="efc-badge">Lens Detection</span>
+    </div>
 
-    <div class="eye-scene">
-      <div class="eye-orbit"></div>
-      <div class="eye-orbit"></div>
-      <div class="eye-socket">
-        <div class="eye-scan"></div>
-        <div class="eye-iris" id="eyeIris"><div class="eye-pupil"></div></div>
-      </div>
-    </div>
-  </div>
+    <div class="eye-scene">
+      <div class="eye-orbit"></div>
+      <div class="eye-orbit"></div>
+      <div class="eye-socket">
+        <div class="eye-scan"></div>
+        <div class="eye-iris" id="eyeIris"><div class="eye-pupil"></div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- PROGRESSION -->
 <div id="progression">
-  <div class="prog-sticky">
-    <div class="prog-frame">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=900" id="progImg" alt="Vision simulation">
-      <div class="prog-frame-rings"></div>
-      <div class="prog-frame-rings"></div>
-    </div>
-  </div>
-  <div class="prog-right-col">
-    <div class="prog-intro-label">Disease Progression</div>
-    <h2 class="prog-h2">How cataracts <em>silently</em><br>steal your sight</h2>
-    <p class="prog-intro-body">Roughly 1 in 6 people will develop clinically significant cataract. Scroll to see how protein aggregation progressively degrades vision — and why early detection is decisive.</p>
-    <div class="scroll-step active" data-stage="0">
-      <div class="scroll-step-num">Stage 00 / Baseline</div>
-      <div class="scroll-step-title">Healthy Vision</div>
-      <div class="scroll-step-body">Crisp detail, accurate color, full contrast. The crystalline lens is transparent. Sharp focal clarity with no opacity in the lens structure.</div>
-    </div>
-    <div class="scroll-step" data-stage="1">
-      <div class="scroll-step-num">Stage 01 / Early</div>
-      <div class="scroll-step-title">Early Stage</div>
-      <div class="scroll-step-body">Protein aggregates begin forming. Images appear slightly dull or dim. Often unnoticed by the patient. The optimal intervention window.</div>
-    </div>
-    <div class="scroll-step" data-stage="2">
-      <div class="scroll-step-num">Stage 02 / Immature</div>
-      <div class="scroll-step-title">Immature Cataract</div>
-      <div class="scroll-step-body">Significant yellowing and contrast loss. Reading and driving become difficult. Protein aggregation increases intra-lenticular light scattering.</div>
-    </div>
-    <div class="scroll-step" data-stage="3">
-      <div class="scroll-step-num">Stage 03 / Mature</div>
-      <div class="scroll-step-title">Mature Cataract</div>
-      <div class="scroll-step-body">Dense nuclear opacity. Vision is reduced to a blurred haze. Surgical lens replacement with IOL is the only effective treatment at this stage.</div>
-    </div>
-  </div>
+  <div class="prog-sticky">
+    <div class="prog-frame">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=900" id="progImg" alt="Vision simulation">
+      <div class="prog-frame-rings"></div>
+      <div class="prog-frame-rings"></div>
+    </div>
+  </div>
+  <div class="prog-right-col">
+    <div class="prog-intro-label">Disease Progression</div>
+    <h2 class="prog-h2">How cataracts <em>silently</em><br>steal your sight</h2>
+    <p class="prog-intro-body">Roughly 1 in 6 people will develop clinically significant cataract. Scroll to see how protein aggregation progressively degrades vision — and why early detection is decisive.</p>
+    <div class="scroll-step active" data-stage="0">
+      <div class="scroll-step-num">Stage 00 / Baseline</div>
+      <div class="scroll-step-title">Healthy Vision</div>
+      <div class="scroll-step-body">Crisp detail, accurate color, full contrast. The crystalline lens is transparent. Sharp focal clarity with no opacity in the lens structure.</div>
+    </div>
+    <div class="scroll-step" data-stage="1">
+      <div class="scroll-step-num">Stage 01 / Early</div>
+      <div class="scroll-step-title">Early Stage</div>
+      <div class="scroll-step-body">Protein aggregates begin forming. Images appear slightly dull or dim. Often unnoticed by the patient. The optimal intervention window.</div>
+    </div>
+    <div class="scroll-step" data-stage="2">
+      <div class="scroll-step-num">Stage 02 / Immature</div>
+      <div class="scroll-step-title">Immature Cataract</div>
+      <div class="scroll-step-body">Significant yellowing and contrast loss. Reading and driving become difficult. Protein aggregation increases intra-lenticular light scattering.</div>
+    </div>
+    <div class="scroll-step" data-stage="3">
+      <div class="scroll-step-num">Stage 03 / Mature</div>
+      <div class="scroll-step-title">Mature Cataract</div>
+      <div class="scroll-step-body">Dense nuclear opacity. Vision is reduced to a blurred haze. Surgical lens replacement with IOL is the only effective treatment at this stage.</div>
+    </div>
+  </div>
 </div>
 
-<!-- SCREENING -->
 <section id="screening">
-  <div class="screen-intro fade-up">
-    <div class="screen-eyebrow">Live Screening Tool</div>
-    <h2 class="screen-title">AI-powered cataract<br>screening</h2>
-    <p class="screen-sub">Upload, paste, or capture a fundus or slit-lamp eye image and receive an instant calibrated AI assessment.</p>
-  </div>
+  <div class="screen-intro fade-up">
+    <div class="screen-eyebrow">Live Screening Tool</div>
+    <h2 class="screen-title">AI-powered cataract<br>screening</h2>
+    <p class="screen-sub">Upload, paste, or capture a fundus or slit-lamp eye image and receive an instant calibrated AI assessment.</p>
+  </div>
 
-  <div class="screen-grid fade-up">
-    <!-- LEFT: Input panel -->
-    <div class="upload-panel">
-      <div class="mode-switcher">
-        <button class="mode-btn active" id="modeBtnUpload" data-mode="upload">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          Upload Eye Image
-        </button>
-        <button class="mode-btn" id="modeBtnDemo" data-mode="demo">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-          Test on Independent Samples
-        </button>
-      </div>
+  <div class="screen-grid fade-up">
+        <div class="upload-panel">
+      <div class="mode-switcher">
+        <button class="mode-btn active" id="modeBtnUpload" data-mode="upload">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Upload Eye Image
+        </button>
+        <button class="mode-btn" id="modeBtnDemo" data-mode="demo">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Test on Independent Samples
+        </button>
+      </div>
 
-      <!-- UPLOAD MODE -->
-      <div id="uploadMode">
-        <div class="tab-bar">
-          <button class="tab-btn active" data-tab="upload">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Upload
-          </button>
-          <button class="tab-btn" data-tab="paste">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            Paste
-          </button>
-          <button class="tab-btn" data-tab="webcam">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7 16 12 23 17V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-            Webcam
-          </button>
-        </div>
+            <div id="uploadMode">
+        <div class="tab-bar">
+          <button class="tab-btn active" data-tab="upload">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Upload
+          </button>
+          <button class="tab-btn" data-tab="paste">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Paste
+          </button>
+          <button class="tab-btn" data-tab="webcam">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7 16 12 23 17V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            Webcam
+          </button>
+        </div>
 
-        <div class="tab-pane active" id="tab-upload">
-          <div class="drop-zone" id="dropZone">
-            <input type="file" id="fileInput" accept="image/*">
-            <div class="dz-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            </div>
-            <p class="dz-title">Drop your image here</p>
-            <p class="dz-hint">or <span>browse</span> to select</p>
-            <div class="dz-formats"><span class="dz-tag">PNG</span><span class="dz-tag">JPG</span><span class="dz-tag">WEBP</span></div>
-          </div>
-          <div class="img-preview-wrap" id="uploadPreview" style="margin-top:14px">
-            <img id="previewImg" alt="Preview">
-            <button class="preview-clear" id="clearBtn">×</button>
-          </div>
-        </div>
+        <div class="tab-pane active" id="tab-upload">
+          <div class="drop-zone" id="dropZone">
+            <input type="file" id="fileInput" accept="image/*">
+            <div class="dz-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <p class="dz-title">Drop your image here</p>
+            <p class="dz-hint">or <span>browse</span> to select</p>
+            <div class="dz-formats"><span class="dz-tag">PNG</span><span class="dz-tag">JPG</span><span class="dz-tag">WEBP</span></div>
+          </div>
+          <div class="img-preview-wrap" id="uploadPreview" style="margin-top:14px">
+            <img id="previewImg" alt="Preview">
+            <button class="preview-clear" id="clearBtn">×</button>
+          </div>
+        </div>
 
-        <div class="tab-pane" id="tab-paste">
-          <div class="paste-zone" id="pasteZone" tabindex="0">
-            <div class="dz-icon" style="margin-bottom:12px">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.8"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            </div>
-            <p style="font-size:1.01rem;font-weight:600;color:var(--text);margin-bottom:4px">Click here, then paste</p>
-            <p style="font-size:0.89rem;color:var(--text-3)">Images from clipboard accepted</p>
-            <div class="kbd-chip">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-              Ctrl+V / Cmd+V
-            </div>
-          </div>
-          <div class="img-preview-wrap" id="pastePreview" style="margin-top:14px">
-            <img id="pastePreviewImg" alt="Pasted preview">
-            <button class="preview-clear" id="pasteClearBtn">×</button>
-          </div>
-        </div>
+        <div class="tab-pane" id="tab-paste">
+          <div class="paste-zone" id="pasteZone" tabindex="0">
+            <div class="dz-icon" style="margin-bottom:12px">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.8"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </div>
+            <p style="font-size:1.01rem;font-weight:600;color:var(--text);margin-bottom:4px">Click here, then paste</p>
+            <p style="font-size:0.89rem;color:var(--text-3)">Images from clipboard accepted</p>
+            <div class="kbd-chip">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              Ctrl+V / Cmd+V
+            </div>
+          </div>
+          <div class="img-preview-wrap" id="pastePreview" style="margin-top:14px">
+            <img id="pastePreviewImg" alt="Pasted preview">
+            <button class="preview-clear" id="pasteClearBtn">×</button>
+          </div>
+        </div>
 
-        <div class="tab-pane" id="tab-webcam">
-          <div class="webcam-wrap">
-            <video id="webcamVideo" autoplay playsinline muted></video>
-            <canvas id="webcamCanvas" style="display:none"></canvas>
-            <div class="webcam-overlay" id="webcamOverlay">
-              <div style="text-align:center">
-                <div class="dz-icon" style="margin:0 auto 10px">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.8"><path d="M23 7 16 12 23 17V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-                </div>
-                <p style="font-size:0.93rem;color:rgba(255,255,255,0.4)">Camera not started</p>
-              </div>
-            </div>
-            <div class="wc-scan" id="wcScan"></div>
-          </div>
-          <div class="webcam-btns">
-            <button class="wc-btn accent" id="startCamBtn">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Start
-            </button>
-            <button class="wc-btn" id="captureBtn" disabled>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="9"/></svg>Capture
-            </button>
-            <button class="wc-btn" id="stopCamBtn" disabled>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>Stop
-            </button>
-          </div>
-          <div class="img-preview-wrap" id="webcamPreview" style="margin-top:14px">
-            <img id="webcamPreviewImg" alt="Captured frame">
-            <button class="preview-clear" id="webcamClearBtn">×</button>
-          </div>
-        </div>
+        <div class="tab-pane" id="tab-webcam">
+          <div class="webcam-wrap">
+            <video id="webcamVideo" autoplay playsinline muted></video>
+            <canvas id="webcamCanvas" style="display:none"></canvas>
+            <div class="webcam-overlay" id="webcamOverlay">
+              <div style="text-align:center">
+                <div class="dz-icon" style="margin:0 auto 10px">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.8"><path d="M23 7 16 12 23 17V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                </div>
+                <p style="font-size:0.93rem;color:rgba(255,255,255,0.4)">Camera not started</p>
+              </div>
+            </div>
+            <div class="wc-scan" id="wcScan"></div>
+          </div>
+          <div class="webcam-btns">
+            <button class="wc-btn accent" id="startCamBtn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Start
+            </button>
+            <button class="wc-btn" id="captureBtn" disabled>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="9"/></svg>Capture
+            </button>
+            <button class="wc-btn" id="stopCamBtn" disabled>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>Stop
+            </button>
+          </div>
+          <div class="img-preview-wrap" id="webcamPreview" style="margin-top:14px">
+            <img id="webcamPreviewImg" alt="Captured frame">
+            <button class="preview-clear" id="webcamClearBtn">×</button>
+          </div>
+        </div>
 
-        <div class="run-area">
-          <button class="run-btn" id="runBtn" disabled>
-            <div class="spin"></div>
-            <span class="btn-text">Run Screening</span>
-          </button>
-        </div>
-      </div>
+        <div class="run-area">
+          <button class="run-btn" id="runBtn" disabled>
+            <div class="spin"></div>
+            <span class="btn-text">Run Screening</span>
+          </button>
+        </div>
+      </div>
 
-      <!-- DEMO MODE -->
-      <div id="demoMode" style="display:none; padding:24px 24px 0;">
-        <div class="demo-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          These images were <strong style="color:var(--text-2)">not used during model training</strong>. Part of an independent demo validation set.
-        </div>
-        <div class="demo-label">Select Demo Category</div>
-        <div class="demo-categories" id="demoCategoryList">
-          <button class="demo-cat-btn active" data-cat="Natural — No Cataract">Natural — No Cataract</button>
-          <button class="demo-cat-btn" data-cat="Natural — Immature Cataract">Natural — Immature Cataract</button>
-          <button class="demo-cat-btn" data-cat="Natural — Mature Cataract">Natural — Mature Cataract</button>
-          <button class="demo-cat-btn" data-cat="Intraocular Lens (IOL)">Intraocular Lens (IOL)</button>
-        </div>
-        <div class="img-preview-wrap show" id="demoPreview" style="margin-top:16px;max-height:400px;position:relative;overflow:hidden;border-radius:10px;">
-          <img id="demoPreviewImg" alt="Demo sample" style="opacity:0.25;object-fit:contain;width:100%;height:100%;max-height:400px;">
-          <div id="demoPlaceholderText" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
-            <span style="font-size:0.91rem;color:var(--text-3)">Click below to load a sample</span>
-          </div>
-        </div>
-        <div class="run-area" style="padding-top:14px;">
-          <button class="run-btn" id="demoRunBtn">
-            <div class="spin" id="demoSpin" style="display:none"></div>
-            <span class="btn-text">Load Sample &amp; Screen</span>
-          </button>
-        </div>
-      </div>
+            <div id="demoMode" style="display:none; padding:24px 24px 0;">
+        <div class="demo-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          These images were <strong style="color:var(--text-2)">not used during model training</strong>. Part of an independent demo validation set.
+        </div>
+        <div class="demo-label">Select Demo Category</div>
+        <div class="demo-categories" id="demoCategoryList">
+          <button class="demo-cat-btn active" data-cat="Natural — No Cataract">Natural — No Cataract</button>
+          <button class="demo-cat-btn" data-cat="Natural — Immature Cataract">Natural — Immature Cataract</button>
+          <button class="demo-cat-btn" data-cat="Natural — Mature Cataract">Natural — Mature Cataract</button>
+          <button class="demo-cat-btn" data-cat="Intraocular Lens (IOL)">Intraocular Lens (IOL)</button>
+        </div>
+        <div class="img-preview-wrap show" id="demoPreview" style="margin-top:16px;max-height:400px;position:relative;overflow:hidden;border-radius:10px;">
+          <img id="demoPreviewImg" alt="Demo sample" style="opacity:0.25;object-fit:contain;width:100%;height:100%;max-height:400px;">
+          <div id="demoPlaceholderText" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
+            <span style="font-size:0.91rem;color:var(--text-3)">Click below to load a sample</span>
+          </div>
+        </div>
+        <div class="run-area" style="padding-top:14px;">
+          <button class="run-btn" id="demoRunBtn">
+            <div class="spin" id="demoSpin" style="display:none"></div>
+            <span class="btn-text">Load Sample &amp; Screen</span>
+          </button>
+        </div>
+      </div>
 
-      <div style="padding:12px 24px 24px;">
-        <div class="warning-bar">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b08b3c" stroke-width="2"><path d="m10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Research &amp; educational use only. Not a clinical diagnostic device. Consult a qualified ophthalmologist.
-        </div>
-      </div>
-    </div>
+      <div style="padding:12px 24px 24px;">
+        <div class="warning-bar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b08b3c" stroke-width="2"><path d="m10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Research &amp; educational use only. Not a clinical diagnostic device. Consult a qualified ophthalmologist.
+        </div>
+      </div>
+    </div>
 
-    <!-- RIGHT: Results panel -->
-    <div class="result-panel">
-      <div class="result-inner">
-        <div class="result-placeholder" id="resultPlaceholder">
-          <div class="placeholder-ring">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
-          </div>
-          <h4>No image analysed yet</h4>
-          <p>Upload an eye image and click <em>Run Screening</em> to view the calibrated result here.</p>
-        </div>
+        <div class="result-panel">
+      <div class="result-inner">
+        <div class="result-placeholder" id="resultPlaceholder">
+          <div class="placeholder-ring">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h4>No image analysed yet</h4>
+          <p>Upload an eye image and click <em>Run Screening</em> to view the calibrated result here.</p>
+        </div>
 
-        <div class="result-output" id="resultOutput">
-          <div class="res-header">
-            <div class="result-zone-badge" id="zoneBadge">—</div>
-            <div class="result-assessment" id="resultAssessment">—</div>
-            <div class="result-sub" id="resultSub">—</div>
-          </div>
+        <div class="result-output" id="resultOutput">
+          <div class="res-header">
+            <div class="result-zone-badge" id="zoneBadge">—</div>
+            <div class="result-assessment" id="resultAssessment">—</div>
+            <div class="result-sub" id="resultSub">—</div>
+          </div>
 
-          <div class="res-block">
-            <div class="res-block-label">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              Explanation
-            </div>
-            <div class="res-block-value" id="resultNote">—</div>
-          </div>
+          <div class="res-block">
+            <div class="res-block-label">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Explanation
+            </div>
+            <div class="res-block-value" id="resultNote">—</div>
+          </div>
 
-          <div class="res-block">
-            <div class="res-block-label">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              Suggested Action
-            </div>
-            <div class="action-tag" id="actionTag">—</div>
-          </div>
+          <div class="res-block">
+            <div class="res-block-label">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Suggested Action
+            </div>
+            <div class="action-tag" id="actionTag">—</div>
+          </div>
 
-          <div class="res-block res-block-2col">
-            <div class="res-2col-item">
-              <div class="res-block-label">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
-                Lens Type
-              </div>
-              <div class="lens-tag" id="lensTag"><span id="lensType">—</span></div>
-            </div>
-            <div class="res-2col-item">
-              <div class="res-block-label">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Lens Interpretation
-              </div>
-              <div class="res-block-value" id="lensNote">—</div>
-            </div>
-          </div>
+          <div class="res-block res-block-2col">
+            <div class="res-2col-item">
+              <div class="res-block-label">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
+                Lens Type
+              </div>
+              <div class="lens-tag" id="lensTag"><span id="lensType">—</span></div>
+            </div>
+            <div class="res-2col-item">
+              <div class="res-block-label">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Lens Interpretation
+              </div>
+              <div class="res-block-value" id="lensNote">—</div>
+            </div>
+          </div>
 
-          <div class="res-card" id="cataractCard">
-            <div class="res-card-title">Cataract Screening Confidence</div>
-            <div class="conf-group">
-              <div class="conf-row-head">
-                <span class="conf-name">Non-Cataract Probability</span>
-                <span class="conf-badge-tag">Decision Anchor</span>
-                <span class="conf-pct" id="ncPct">—</span>
-              </div>
-              <div class="conf-track"><div class="conf-fill" id="ncBar"></div></div>
-            </div>
-            <div class="conf-group" style="margin-bottom:0">
-              <div class="conf-row-head">
-                <span class="conf-name muted">Raw Cataract Pattern Confidence</span>
-                <span class="conf-pct muted" id="catPct">—</span>
-              </div>
-              <div class="conf-track"><div class="conf-fill" id="catBar" style="background:#4da6ff"></div></div>
-            </div>
-            <p class="res-footnote">Final classification uses calibrated non-cataract thresholds. Raw cataract confidence alone does not determine the result.</p>
-            <details class="decision-details">
-              <summary>How the screening decision is made</summary>
-              <div class="decision-body">
-                <strong>Decision Logic</strong><br>
-                ≤ 8% &nbsp;→ Cataract Present<br>
-                8–10% → Likely Early Cataract<br>
-                10–12% → Monitoring Zone<br>
-                ≥ 12% &nbsp;→ No Cataract Detected
-              </div>
-            </details>
-          </div>
+          <div class="res-card" id="cataractCard">
+            <div class="res-card-title">Cataract Screening Confidence</div>
+            <div class="conf-group">
+              <div class="conf-row-head">
+                <span class="conf-name">Non-Cataract Probability</span>
+                <span class="conf-badge-tag">Decision Anchor</span>
+                <span class="conf-pct" id="ncPct">—</span>
+              </div>
+              <div class="conf-track"><div class="conf-fill" id="ncBar"></div></div>
+            </div>
+            <div class="conf-group" style="margin-bottom:0">
+              <div class="conf-row-head">
+                <span class="conf-name muted">Raw Cataract Pattern Confidence</span>
+                <span class="conf-pct muted" id="catPct">—</span>
+              </div>
+              <div class="conf-track"><div class="conf-fill" id="catBar" style="background:#4da6ff"></div></div>
+            </div>
+            <p class="res-footnote">Final classification uses calibrated non-cataract thresholds. Raw cataract confidence alone does not determine the result.</p>
+            <details class="decision-details">
+              <summary>How the screening decision is made</summary>
+              <div class="decision-body">
+                <strong>Decision Logic</strong><br>
+                ≤ 8% &nbsp;→ Cataract Present<br>
+                8–10% → Likely Early Cataract<br>
+                10–12% → Monitoring Zone<br>
+                ≥ 12% &nbsp;→ No Cataract Detected
+              </div>
+            </details>
+          </div>
 
-          <div class="res-card" id="lensCard">
-            <div class="res-card-title">Lens Analysis</div>
-            <div class="lens-decision-badge" id="lensDecisionBadge">—</div>
-            <div class="conf-group" style="margin-top:16px">
-              <div class="conf-row-head">
-                <span class="conf-name">Natural Lens</span>
-                <span class="conf-pct" id="naturalPct">—</span>
-              </div>
-              <div class="conf-track"><div class="conf-fill" id="naturalBar" style="background:#00d2a0"></div></div>
-            </div>
-            <div class="conf-group" style="margin-bottom:0">
-              <div class="conf-row-head">
-                <span class="conf-name">Intraocular Lens (IOL)</span>
-                <span class="conf-pct" id="iolPct">—</span>
-              </div>
-              <div class="conf-track"><div class="conf-fill" id="iolBar" style="background:#4da6ff"></div></div>
-            </div>
-            <p class="res-footnote">Final classification is based on validated probability thresholds. The highest percentage alone does not determine the outcome.</p>
-          </div>
-        </div>
-      </div>
+          <div class="res-card" id="lensCard">
+            <div class="res-card-title">Lens Analysis</div>
+            <div class="lens-decision-badge" id="lensDecisionBadge">—</div>
+            <div class="conf-group" style="margin-top:16px">
+              <div class="conf-row-head">
+                <span class="conf-name">Natural Lens</span>
+                <span class="conf-pct" id="naturalPct">—</span>
+              </div>
+              <div class="conf-track"><div class="conf-fill" id="naturalBar" style="background:#00d2a0"></div></div>
+            </div>
+            <div class="conf-group" style="margin-bottom:0">
+              <div class="conf-row-head">
+                <span class="conf-name">Intraocular Lens (IOL)</span>
+                <span class="conf-pct" id="iolPct">—</span>
+              </div>
+              <div class="conf-track"><div class="conf-fill" id="iolBar" style="background:#4da6ff"></div></div>
+            </div>
+            <p class="res-footnote">Final classification is based on validated probability thresholds. The highest percentage alone does not determine the outcome.</p>
+          </div>
+        </div>
+      </div>
 
-      <div class="result-footer">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#b08b3c" stroke-width="2" style="margin-top:1px;flex-shrink:0"><path d="m10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        <span id="resultDisclaimer">Research and educational use only. Not a diagnostic or clinical medical device. Always consult a qualified ophthalmologist.</span>
-      </div>
-    </div>
-  </div>
+      <div class="result-footer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#b08b3c" stroke-width="2" style="margin-top:1px;flex-shrink:0"><path d="m10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span id="resultDisclaimer">Research and educational use only. Not a diagnostic or clinical medical device. Always consult a qualified ophthalmologist.</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- GUIDE -->
 <div class="guide-section">
-  <div class="guide-header fade-up">
-    <div class="guide-eyebrow">Interpretation Guide</div>
-    <h3 class="guide-title">How to read your result</h3>
-  </div>
-  <div class="guide-grid fade-up">
-    <div class="guide-card">
-      <div class="guide-swatch" style="background:var(--sev-high)"></div>
-      <div class="guide-card-title">Cataract Present</div>
-      <div class="guide-card-body">Clear imaging evidence of cataract. Opacity patterns consistent with clinically significant lens changes.</div>
-      <div class="guide-card-action" style="color:var(--sev-high)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        Clinical evaluation required
-      </div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-swatch" style="background:var(--sev-mod)"></div>
-      <div class="guide-card-title">Likely Early Cataract</div>
-      <div class="guide-card-body">Early structural lens changes detected. Not yet advanced. Optimal window for preventive monitoring.</div>
-      <div class="guide-card-action" style="color:var(--sev-mod)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        Routine monitoring advised
-      </div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-swatch" style="background:var(--sev-low)"></div>
-      <div class="guide-card-title">Likely Non-Cataract</div>
-      <div class="guide-card-body">No definitive cataract detected. Patterns may overlap with very early features or normal variation.</div>
-      <div class="guide-card-action" style="color:var(--sev-low)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        Monitor if symptoms appear
-      </div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-swatch" style="background:var(--sev-clear)"></div>
-      <div class="guide-card-title">No Cataract Detected</div>
-      <div class="guide-card-body">Lens appearance consistent with healthy structure. No imaging evidence of cataract observed.</div>
-      <div class="guide-card-action" style="color:var(--sev-clear)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        No follow-up required
-      </div>
-    </div>
-  </div>
-  <div class="guide-note fade-up">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    <span>
-      <strong >Important.</strong> This tool is designed for <strong >screening and educational purposes only</strong>.
-      Classification is based on calibrated non-cataract probability thresholds validated during model development — not raw confidence values alone.
-      Results do not constitute a medical diagnosis and must not replace examination by a licensed ophthalmologist.
-    </span>
-  </div>
+  <div class="guide-header fade-up">
+    <div class="guide-eyebrow">Interpretation Guide</div>
+    <h3 class="guide-title">How to read your result</h3>
+  </div>
+  <div class="guide-grid fade-up">
+    <div class="guide-card">
+      <div class="guide-swatch" style="background:var(--sev-high)"></div>
+      <div class="guide-card-title">Cataract Present</div>
+      <div class="guide-card-body">Clear imaging evidence of cataract. Opacity patterns consistent with clinically significant lens changes.</div>
+      <div class="guide-card-action" style="color:var(--sev-high)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        Clinical evaluation required
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-swatch" style="background:var(--sev-mod)"></div>
+      <div class="guide-card-title">Likely Early Cataract</div>
+      <div class="guide-card-body">Early structural lens changes detected. Not yet advanced. Optimal window for preventive monitoring.</div>
+      <div class="guide-card-action" style="color:var(--sev-mod)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        Routine monitoring advised
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-swatch" style="background:var(--sev-low)"></div>
+      <div class="guide-card-title">Likely Non-Cataract</div>
+      <div class="guide-card-body">No definitive cataract detected. Patterns may overlap with very early features or normal variation.</div>
+      <div class="guide-card-action" style="color:var(--sev-low)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        Monitor if symptoms appear
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-swatch" style="background:var(--sev-clear)"></div>
+      <div class="guide-card-title">No Cataract Detected</div>
+      <div class="guide-card-body">Lens appearance consistent with healthy structure. No imaging evidence of cataract observed.</div>
+      <div class="guide-card-action" style="color:var(--sev-clear)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        No follow-up required
+      </div>
+    </div>
+  </div>
+  <div class="guide-note fade-up">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <span>
+      <strong >Important.</strong> This tool is designed for <strong >screening and educational purposes only</strong>.
+      Classification is based on calibrated non-cataract probability thresholds validated during model development — not raw confidence values alone.
+      Results do not constitute a medical diagnosis and must not replace examination by a licensed ophthalmologist.
+    </span>
+  </div>
 </div>
 
 <script>
 // ─── Eye tracking
 const iris = document.getElementById("eyeIris");
 document.addEventListener("mousemove", e => {
-  if (!iris) return;
-  const r = iris.closest(".eye-socket").getBoundingClientRect();
-  const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-  const a = Math.atan2(e.clientY - cy, e.clientX - cx);
-  const d = Math.min(22, Math.hypot(e.clientX - cx, e.clientY - cy) / 12);
-  iris.style.transform = `translate(${Math.cos(a)*d}px, ${Math.sin(a)*d}px)`;
+  if (!iris) return;
+  const r = iris.closest(".eye-socket").getBoundingClientRect();
+  const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+  const a = Math.atan2(e.clientY - cy, e.clientX - cx);
+  const d = Math.min(22, Math.hypot(e.clientX - cx, e.clientY - cy) / 12);
+  iris.style.transform = `translate(${Math.cos(a)*d}px, ${Math.sin(a)*d}px)`;
 });
 
 // ─── Progression scroll
-const steps   = document.querySelectorAll(".scroll-step");
+const steps   = document.querySelectorAll(".scroll-step");
 const progImg = document.getElementById("progImg");
-const stages  = [
-  "blur(0px) sepia(0%) brightness(100%)",
-  "blur(4px) sepia(20%) brightness(90%)",
-  "blur(12px) sepia(50%) brightness(72%)",
-  "blur(30px) sepia(80%) brightness(55%)"
+const stages  = [
+  "blur(0px) sepia(0%) brightness(100%)",
+  "blur(4px) sepia(20%) brightness(90%)",
+  "blur(12px) sepia(50%) brightness(72%)",
+  "blur(30px) sepia(80%) brightness(55%)"
 ];
 window.addEventListener("scroll", () => {
-  let cur = 0;
-  steps.forEach((s, i) => {
-    if (s.getBoundingClientRect().top < window.innerHeight * 0.58) cur = i;
-  });
-  if (progImg) progImg.style.filter = stages[cur];
-  steps.forEach((s, i) => s.classList.toggle("active", i === cur));
+  let cur = 0;
+  steps.forEach((s, i) => {
+    if (s.getBoundingClientRect().top < window.innerHeight * 0.58) cur = i;
+  });
+  if (progImg) progImg.style.filter = stages[cur];
+  steps.forEach((s, i) => s.classList.toggle("active", i === cur));
 });
 
 // ─── Fade-in observer
 const io = new IntersectionObserver(
-  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); }),
-  { threshold: 0.1 }
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); }),
+  { threshold: 0.1 }
 );
 document.querySelectorAll(".fade-up").forEach(el => io.observe(el));
 
 // ══════════════════════════════════════════
 // STATE
 // ══════════════════════════════════════════
-// const API_URL  = "http://127.0.0.1:8000/predict";
+// const API_URL  = "http://127.0.0.1:8000/predict";
 // const DEMO_URL = "http://127.0.0.1:8000/demo";
-   const API_URL  = "/predict";
+   const API_URL  = "/predict";
 const DEMO_URL = "/demo";
 
 // ─── Render Keep-Alive Health Check ───
 // Pings the backend every 14 minutes while the browser tab is open
 setInterval(() => {
-    fetch('/health')
-        .then(response => console.log("Server keep-alive ping:", response.status))
-        .catch(error => console.error("Server keep-alive failed:", error));
+    fetch('/health')
+        .then(response => console.log("Server keep-alive ping:", response.status))
+        .catch(error => console.error("Server keep-alive failed:", error));
 }, 14 * 60 * 1000);
 
-let currentBlob   = null;
-let activeTab     = "upload";
-let activeMode    = "upload";
+let currentBlob   = null;
+let activeTab     = "upload";
+let activeMode    = "upload";
 let activeDemoCat = "Natural — No Cataract";
-let camStream     = null;
+let camStream     = null;
 
 const SEV = {
-  high:     { color:"#ff4d6d", bg:"rgba(255,77,109,0.08)",   border:"rgba(255,77,109,0.3)",  label:"Strong Cataract Signal" },
-  moderate: { color:"#ffb347", bg:"rgba(255,179,71,0.08)",   border:"rgba(255,179,71,0.3)",  label:"Early Signal Zone" },
-  low:      { color:"#7eb8ff", bg:"rgba(126,184,255,0.08)",  border:"rgba(126,184,255,0.3)", label:"Monitoring Zone" },
-  clear:    { color:"#00d2a0", bg:"rgba(0,210,160,0.08)",    border:"rgba(0,210,160,0.3)",   label:"Clear Non-Cataract Zone" }
+  high:     { color:"#ff4d6d", bg:"rgba(255,77,109,0.08)",   border:"rgba(255,77,109,0.3)",  label:"Strong Cataract Signal" },
+  moderate: { color:"#ffb347", bg:"rgba(255,179,71,0.08)",   border:"rgba(255,179,71,0.3)",  label:"Early Signal Zone" },
+  low:      { color:"#7eb8ff", bg:"rgba(126,184,255,0.08)",  border:"rgba(126,184,255,0.3)", label:"Monitoring Zone" },
+  clear:    { color:"#00d2a0", bg:"rgba(0,210,160,0.08)",    border:"rgba(0,210,160,0.3)",   label:"Clear Non-Cataract Zone" }
 };
 
 function assessmentToSev(a) {
-  if (!a) return "clear";
-  const l = a.toLowerCase();
-  if (l.includes("cataract present"))                 return "high";
-  if (l.includes("early") || l.includes("immature")) return "moderate";
-  if (l.includes("overlap"))                          return "low";
-  return "clear";
+  if (!a) return "clear";
+  const l = a.toLowerCase();
+  if (l.includes("cataract present"))                 return "high";
+  if (l.includes("early") || l.includes("immature")) return "moderate";
+  if (l.includes("overlap"))                          return "low";
+  return "clear";
 }
 
 // ══════════════════════════════════════════
 // TABS
 // ══════════════════════════════════════════
 document.querySelectorAll(".tab-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const tab = btn.dataset.tab;
-    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-    document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById("tab-" + tab).classList.add("active");
-    activeTab = tab;
-    stopCamera();
-    resetImage();
-  });
+  btn.addEventListener("click", () => {
+    const tab = btn.dataset.tab;
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-" + tab).classList.add("active");
+    activeTab = tab;
+    stopCamera();
+    resetImage();
+  });
 });
 
 // ══════════════════════════════════════════
 // MODE SWITCHER
 // ══════════════════════════════════════════
 document.querySelectorAll(".mode-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const mode = btn.dataset.mode;
-    if (mode === activeMode) return;
-    activeMode = mode;
-    document.querySelectorAll(".mode-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    if (mode === "upload") {
-      document.getElementById("uploadMode").style.display = "";
-      document.getElementById("demoMode").style.display   = "none";
-      stopCamera();
-    } else {
-      document.getElementById("uploadMode").style.display = "none";
-      document.getElementById("demoMode").style.display   = "";
-      resetImage();
-      clearResult();
-    }
-  });
+  btn.addEventListener("click", () => {
+    const mode = btn.dataset.mode;
+    if (mode === activeMode) return;
+    activeMode = mode;
+    document.querySelectorAll(".mode-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    if (mode === "upload") {
+      document.getElementById("uploadMode").style.display = "";
+      document.getElementById("demoMode").style.display   = "none";
+      stopCamera();
+    } else {
+      document.getElementById("uploadMode").style.display = "none";
+      document.getElementById("demoMode").style.display   = "";
+      resetImage();
+      clearResult();
+    }
+  });
 });
 
 document.querySelectorAll(".demo-cat-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    activeDemoCat = btn.dataset.cat;
-    document.querySelectorAll(".demo-cat-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-  });
+  btn.addEventListener("click", () => {
+    activeDemoCat = btn.dataset.cat;
+    document.querySelectorAll(".demo-cat-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
 });
 
 document.getElementById("demoRunBtn").addEventListener("click", async () => {
-  const btn  = document.getElementById("demoRunBtn");
-  const spin = document.getElementById("demoSpin");
-  btn.disabled = true;
-  spin.style.display = "block";
-  clearResult();
-  try {
-    const res = await fetch(DEMO_URL + "?category=" + encodeURIComponent(activeDemoCat));
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({ detail: "HTTP " + res.status }));
-      throw new Error(err.detail);
-    }
-    const data = await res.json();
-    if (data.sample_image_b64) {
-      const preview = document.getElementById("demoPreviewImg");
-      preview.src           = "data:image/jpeg;base64," + data.sample_image_b64;
-      preview.style.opacity = "1";
-      const ph = document.getElementById("demoPlaceholderText");
-      if (ph) ph.style.display = "none";
-    }
-    renderResult(data);
-  } catch (err) {
-    renderError(err.message);
-  } finally {
-    btn.disabled       = false;
-    spin.style.display = "none";
-  }
+  const btn  = document.getElementById("demoRunBtn");
+  const spin = document.getElementById("demoSpin");
+  btn.disabled = true;
+  spin.style.display = "block";
+  clearResult();
+  try {
+    const timestamp = new Date().getTime();
+    const res = await fetch(DEMO_URL + "?category=" + encodeURIComponent(activeDemoCat) + "&_t=" + timestamp);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ detail: "HTTP " + res.status }));
+      throw new Error(err.detail);
+    }
+    const data = await res.json();
+    if (data.sample_image_b64) {
+      const preview = document.getElementById("demoPreviewImg");
+      preview.src           = "data:image/jpeg;base64," + data.sample_image_b64;
+      preview.style.opacity = "1";
+      const ph = document.getElementById("demoPlaceholderText");
+      if (ph) ph.style.display = "none";
+    }
+    renderResult(data);
+  } catch (err) {
+    renderError(err.message);
+  } finally {
+    btn.disabled       = false;
+    spin.style.display = "none";
+  }
 });
 
 // ══════════════════════════════════════════
 // IMAGE HELPERS
 // ══════════════════════════════════════════
 function setImage(blob, previewId, imgId) {
-  currentBlob = blob;
-  document.getElementById(imgId).src = URL.createObjectURL(blob);
-  document.getElementById(previewId).classList.add("show");
-  document.getElementById("runBtn").disabled = false;
+  if (currentBlob && currentBlob instanceof Blob) {
+    URL.revokeObjectURL(document.getElementById(imgId).src);
+  }
+  currentBlob = blob;
+  document.getElementById(imgId).src = URL.createObjectURL(blob);
+  document.getElementById(previewId).classList.add("show");
+  document.getElementById("runBtn").disabled = false;
 }
 function resetImage() {
-  currentBlob = null;
-  document.getElementById("runBtn").disabled = true;
-  ["uploadPreview","pastePreview","webcamPreview"].forEach(id => {
-    document.getElementById(id).classList.remove("show");
-  });
+  currentBlob = null;
+  document.getElementById("runBtn").disabled = true;
+  ["uploadPreview","pastePreview","webcamPreview"].forEach(id => {
+    document.getElementById(id).classList.remove("show");
+  });
 }
 
 // ══════════════════════════════════════════
 // UPLOAD / DROP
 // ══════════════════════════════════════════
-const dz        = document.getElementById("dropZone");
+const dz        = document.getElementById("dropZone");
 const fileInput = document.getElementById("fileInput");
 fileInput.addEventListener("change", e => {
-  const f = e.target.files[0];
-  if (f) setImage(f, "uploadPreview", "previewImg");
+  const f = e.target.files[0];
+  if (f) setImage(f, "uploadPreview", "previewImg");
 });
-dz.addEventListener("dragover",  e => { e.preventDefault(); dz.classList.add("dragover"); });
+dz.addEventListener("dragover",  e => { e.preventDefault(); dz.classList.add("dragover"); });
 dz.addEventListener("dragleave", () => dz.classList.remove("dragover"));
 dz.addEventListener("drop", e => {
-  e.preventDefault(); dz.classList.remove("dragover");
-  const f = e.dataTransfer.files[0];
-  if (f && f.type.startsWith("image/")) setImage(f, "uploadPreview", "previewImg");
+  e.preventDefault(); dz.classList.remove("dragover");
+  const f = e.dataTransfer.files[0];
+  if (f && f.type.startsWith("image/")) setImage(f, "uploadPreview", "previewImg");
 });
 document.getElementById("clearBtn").addEventListener("click", () => { resetImage(); fileInput.value = ""; });
 
@@ -1192,16 +1187,16 @@ document.getElementById("clearBtn").addEventListener("click", () => { resetImage
 // ══════════════════════════════════════════
 const pz = document.getElementById("pasteZone");
 pz.addEventListener("focus", () => pz.classList.add("focused"));
-pz.addEventListener("blur",  () => pz.classList.remove("focused"));
+pz.addEventListener("blur",  () => pz.classList.remove("focused"));
 function handlePaste(e) {
-  const items = e.clipboardData?.items;
-  if (!items) return;
-  for (const item of items) {
-    if (item.type.startsWith("image/")) {
-      setImage(item.getAsFile(), "pastePreview", "pastePreviewImg");
-      break;
-    }
-  }
+  const items = e.clipboardData?.items;
+  if (!items) return;
+  for (const item of items) {
+    if (item.type.startsWith("image/")) {
+      setImage(item.getAsFile(), "pastePreview", "pastePreviewImg");
+      break;
+    }
+  }
 }
 pz.addEventListener("paste", handlePaste);
 document.addEventListener("paste", e => { if (activeTab === "paste") handlePaste(e); });
@@ -1210,41 +1205,41 @@ document.getElementById("pasteClearBtn").addEventListener("click", resetImage);
 // ══════════════════════════════════════════
 // WEBCAM
 // ══════════════════════════════════════════
-const video   = document.getElementById("webcamVideo");
-const canvas  = document.getElementById("webcamCanvas");
+const video   = document.getElementById("webcamVideo");
+const canvas  = document.getElementById("webcamCanvas");
 const overlay = document.getElementById("webcamOverlay");
-const wcScan  = document.getElementById("wcScan");
+const wcScan  = document.getElementById("wcScan");
 
 document.getElementById("startCamBtn").addEventListener("click", async () => {
-  try {
-    camStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } });
-    video.srcObject              = camStream;
-    overlay.style.display        = "none";
-    wcScan.style.opacity         = "0.8";
-    document.getElementById("captureBtn").disabled = false;
-    document.getElementById("stopCamBtn").disabled  = false;
-    document.getElementById("startCamBtn").disabled = true;
-  } catch (err) { alert("Camera access denied: " + err.message); }
+  try {
+    camStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } });
+    video.srcObject              = camStream;
+    overlay.style.display        = "none";
+    wcScan.style.opacity         = "0.8";
+    document.getElementById("captureBtn").disabled = false;
+    document.getElementById("stopCamBtn").disabled  = false;
+    document.getElementById("startCamBtn").disabled = true;
+  } catch (err) { alert("Camera access denied: " + err.message); }
 });
 document.getElementById("captureBtn").addEventListener("click", () => {
-  canvas.width  = video.videoWidth;
-  canvas.height = video.videoHeight;
-  canvas.getContext("2d").drawImage(video, 0, 0);
-  canvas.toBlob(blob => { setImage(blob, "webcamPreview", "webcamPreviewImg"); stopCamera(); }, "image/jpeg", 0.92);
+  canvas.width  = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext("2d").drawImage(video, 0, 0);
+  canvas.toBlob(blob => { setImage(blob, "webcamPreview", "webcamPreviewImg"); stopCamera(); }, "image/jpeg", 0.92);
 });
 document.getElementById("stopCamBtn").addEventListener("click", stopCamera);
 document.getElementById("webcamClearBtn").addEventListener("click", () => {
-  resetImage();
-  document.getElementById("webcamPreview").classList.remove("show");
+  resetImage();
+  document.getElementById("webcamPreview").classList.remove("show");
 });
 function stopCamera() {
-  if (camStream) { camStream.getTracks().forEach(t => t.stop()); camStream = null; }
-  video.srcObject              = null;
-  overlay.style.display        = "flex";
-  wcScan.style.opacity         = "0";
-  document.getElementById("captureBtn").disabled = true;
-  document.getElementById("stopCamBtn").disabled  = true;
-  document.getElementById("startCamBtn").disabled = false;
+  if (camStream) { camStream.getTracks().forEach(t => t.stop()); camStream = null; }
+  video.srcObject              = null;
+  overlay.style.display        = "flex";
+  wcScan.style.opacity         = "0";
+  document.getElementById("captureBtn").disabled = true;
+  document.getElementById("stopCamBtn").disabled  = true;
+  document.getElementById("startCamBtn").disabled = false;
 }
 
 // ══════════════════════════════════════════
@@ -1252,134 +1247,154 @@ function stopCamera() {
 // ══════════════════════════════════════════
 const runBtn = document.getElementById("runBtn");
 runBtn.addEventListener("click", async () => {
-  if (!currentBlob) return;
-  runBtn.disabled = true;
-  runBtn.classList.add("loading");
-  clearResult();
-  const fd = new FormData();
-  fd.append("file", currentBlob, "eye_image.jpg");
-  try {
-    const res = await fetch(API_URL, { method: "POST", body: fd });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({ detail: `HTTP ${res.status}` }));
-      throw new Error(err.detail);
-    }
-    renderResult(await res.json());
-  } catch (err) {
-    renderError(err.message);
-  } finally {
-    runBtn.classList.remove("loading");
-    runBtn.disabled = false;
-  }
+  if (!currentBlob) return;
+  runBtn.disabled = true;
+  runBtn.classList.add("loading");
+  clearResult();
+  const fd = new FormData();
+  fd.append("file", currentBlob, "eye_image.jpg");
+  try {
+    const res = await fetch(API_URL, { method: "POST", body: fd });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ detail: `HTTP ${res.status}` }));
+      throw new Error(err.detail);
+    }
+    renderResult(await res.json());
+  } catch (err) {
+    renderError(err.message);
+  } finally {
+    runBtn.classList.remove("loading");
+    runBtn.disabled = false;
+  }
 });
 
 // ══════════════════════════════════════════
 // RENDER
 // ══════════════════════════════════════════
 function clearResult() {
-  document.getElementById("resultPlaceholder").style.display = "flex";
-  document.getElementById("resultOutput").classList.remove("visible");
+  document.getElementById("resultPlaceholder").style.display = "flex";
+  document.getElementById("resultOutput").classList.remove("visible");
+
+  // Memory cleanup additions
+  const demoImg = document.getElementById("demoPreviewImg");
+  if (demoImg) {
+    demoImg.src = "";
+    demoImg.style.opacity = "0.25";
+  }
+  const demoPh = document.getElementById("demoPlaceholderText");
+  if (demoPh) demoPh.style.display = "flex";
+
+  ["ncBar", "catBar", "naturalBar", "iolBar"].forEach(id => {
+    const bar = document.getElementById(id);
+    if (bar) bar.style.width = "0%";
+  });
+
+  const zb = document.getElementById("zoneBadge");
+  if (zb) {
+    zb.style.background = "transparent";
+    zb.textContent = "—";
+  }
 }
 
 function renderResult(data) {
-  const sev = assessmentToSev(data.assessment);
-  const cfg = SEV[sev];
+  const sev = assessmentToSev(data.assessment);
+  const cfg = SEV[sev];
 
-  document.getElementById("resultPlaceholder").style.display = "none";
+  document.getElementById("resultPlaceholder").style.display = "none";
 
-  const zb = document.getElementById("zoneBadge");
-  zb.textContent       = data.zone || cfg.label;
-  zb.style.background  = cfg.bg;
-  zb.style.borderColor = cfg.border;
-  zb.style.color       = cfg.color;
+  const zb = document.getElementById("zoneBadge");
+  zb.textContent       = data.zone || cfg.label;
+  zb.style.background  = cfg.bg;
+  zb.style.borderColor = cfg.border;
+  zb.style.color       = cfg.color;
 
-  document.getElementById("resultAssessment").textContent = data.assessment || "—";
-  document.getElementById("resultSub").textContent        = sev.toUpperCase() + " · CATARACTNET v1.0";
-  document.getElementById("resultNote").textContent       = data.note || "—";
+  document.getElementById("resultAssessment").textContent = data.assessment || "—";
+  document.getElementById("resultSub").textContent        = sev.toUpperCase() + " · CATARACTNET v1.0";
+  document.getElementById("resultNote").textContent       = data.note || "—";
 
-  const at = document.getElementById("actionTag");
-  at.textContent       = data.suggested_action || "—";
-  at.style.background  = cfg.bg;
-  at.style.borderColor = cfg.border;
-  at.style.color       = cfg.color;
+  const at = document.getElementById("actionTag");
+  at.textContent       = data.suggested_action || "—";
+  at.style.background  = cfg.bg;
+  at.style.borderColor = cfg.border;
+  at.style.color       = cfg.color;
 
-  document.getElementById("lensType").textContent = data.lens_type || "—";
-  document.getElementById("lensNote").textContent = data.lens_note || "—";
+  document.getElementById("lensType").textContent = data.lens_type || "—";
+  document.getElementById("lensNote").textContent = data.lens_note || "—";
 
-  const ncPct  = Math.round((data.confidence_dist?.["No Cataract"] ?? 0) * 100);
-  const catPct = Math.round((data.confidence_dist?.["Cataract"]    ?? 0) * 100);
-  document.getElementById("ncPct").textContent  = ncPct  + "%";
-  document.getElementById("catPct").textContent = catPct + "%";
+  const ncPct  = Math.round((data.confidence_dist?.["No Cataract"] ?? 0) * 100);
+  const catPct = Math.round((data.confidence_dist?.["Cataract"]    ?? 0) * 100);
+  document.getElementById("ncPct").textContent  = ncPct  + "%";
+  document.getElementById("catPct").textContent = catPct + "%";
 
-  const lp         = data.lens_probs || {};
-  const naturalPct = Math.round((lp.Natural ?? lp.natural ?? 0) * 100);
-  const iolPct     = Math.round((lp.IOL     ?? lp.iol     ?? 0) * 100);
-  document.getElementById("naturalPct").textContent = naturalPct + "%";
-  document.getElementById("iolPct").textContent     = iolPct     + "%";
+  const lp         = data.lens_probs || {};
+  const naturalPct = Math.round((lp.Natural ?? lp.natural ?? 0) * 100);
+  const iolPct     = Math.round((lp.IOL     ?? lp.iol     ?? 0) * 100);
+  document.getElementById("naturalPct").textContent = naturalPct + "%";
+  document.getElementById("iolPct").textContent     = iolPct     + "%";
 
-  const isIOL = (data.lens_type || "").toLowerCase().includes("intraocular") ||
-                (data.lens_type || "").toLowerCase().includes("iol");
-  const ldb = document.getElementById("lensDecisionBadge");
-  ldb.textContent       = "Final Decision: " + (data.lens_type || "—");
-  ldb.style.background  = isIOL ? "rgba(0,128,255,0.12)"  : "rgba(0,210,160,0.12)";
-  ldb.style.borderColor = isIOL ? "rgba(0,128,255,0.35)"  : "rgba(0,210,160,0.35)";
-  ldb.style.color       = isIOL ? "#4da6ff"               : "#00d2a0";
+  const isIOL = (data.lens_type || "").toLowerCase().includes("intraocular") ||
+                (data.lens_type || "").toLowerCase().includes("iol");
+  const ldb = document.getElementById("lensDecisionBadge");
+  ldb.textContent       = "Final Decision: " + (data.lens_type || "—");
+  ldb.style.background  = isIOL ? "rgba(0,128,255,0.12)"  : "rgba(0,210,160,0.12)";
+  ldb.style.borderColor = isIOL ? "rgba(0,128,255,0.35)"  : "rgba(0,210,160,0.35)";
+  ldb.style.color       = isIOL ? "#4da6ff"               : "#00d2a0";
 
-  requestAnimationFrame(() => {
-    setTimeout(() => {
-      const ncBar = document.getElementById("ncBar");
-      ncBar.style.background = cfg.color;
-      ncBar.style.width      = ncPct + "%";
-      document.getElementById("catBar").style.width = catPct + "%";
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      const ncBar = document.getElementById("ncBar");
+      ncBar.style.background = cfg.color;
+      ncBar.style.width      = ncPct + "%";
+      document.getElementById("catBar").style.width = catPct + "%";
 
-      const naturalBar = document.getElementById("naturalBar");
-      const iolBar     = document.getElementById("iolBar");
-      naturalBar.style.background = isIOL ? "rgba(0,210,160,0.3)" : "#00d2a0";
-      naturalBar.style.width      = naturalPct + "%";
-      iolBar.style.background     = isIOL ? "#4da6ff"             : "rgba(77,166,255,0.3)";
-      iolBar.style.width          = iolPct + "%";
-    }, 50);
-  });
+      const naturalBar = document.getElementById("naturalBar");
+      const iolBar     = document.getElementById("iolBar");
+      naturalBar.style.background = isIOL ? "rgba(0,210,160,0.3)" : "#00d2a0";
+      naturalBar.style.width      = naturalPct + "%";
+      iolBar.style.background     = isIOL ? "#4da6ff"             : "rgba(77,166,255,0.3)";
+      iolBar.style.width          = iolPct + "%";
+    }, 50);
+  });
 
-  if (data.disclaimer) document.getElementById("resultDisclaimer").textContent = data.disclaimer;
+  if (data.disclaimer) document.getElementById("resultDisclaimer").textContent = data.disclaimer;
 
-  document.getElementById("resultOutput").classList.add("visible");
-  document.getElementById("resultOutput").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  document.getElementById("resultOutput").classList.add("visible");
+  document.getElementById("resultOutput").scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 function renderError(msg) {
-  renderResult({
-    assessment:       "Screening Error",
-    note:             msg,
-    suggested_action: "Please check the image and try again.",
-    lens_type:        "—",
-    lens_note:        "Unable to determine lens type due to error.",
-    zone:             "Error",
-    zone_color:       "#9ca3af",
-    disclaimer:       "Research and educational use only.",
-    confidence_dist:  { Cataract: 0, "No Cataract": 0 },
-    lens_probs:       { IOL: 0, Natural: 0 }
-  });
+  renderResult({
+    assessment:       "Screening Error",
+    note:             msg,
+    suggested_action: "Please check the image and try again.",
+    lens_type:        "—",
+    lens_note:        "Unable to determine lens type due to error.",
+    zone:             "Error",
+    zone_color:       "#9ca3af",
+    disclaimer:       "Research and educational use only.",
+    confidence_dist:  { Cataract: 0, "No Cataract": 0 },
+    lens_probs:       { IOL: 0, Natural: 0 }
+  });
 }
 
 // ══════════════════════════════════════════
 // THEME TOGGLE
 // ══════════════════════════════════════════
 (function () {
-  const root  = document.documentElement;
-  const btn   = document.getElementById("themeToggle");
-  const STORE = "cataractnet-theme";
-  try { if (localStorage.getItem(STORE) === "light") root.setAttribute("data-theme", "light"); } catch(e) {}
-  btn.addEventListener("click", () => {
-    const isLight = root.getAttribute("data-theme") === "light";
-    if (isLight) {
-      root.removeAttribute("data-theme");
-      try { localStorage.setItem(STORE, "dark"); } catch(e) {}
-    } else {
-      root.setAttribute("data-theme", "light");
-      try { localStorage.setItem(STORE, "light"); } catch(e) {}
-    }
-  });
+  const root  = document.documentElement;
+  const btn   = document.getElementById("themeToggle");
+  const STORE = "cataractnet-theme";
+  try { if (localStorage.getItem(STORE) === "light") root.setAttribute("data-theme", "light"); } catch(e) {}
+  btn.addEventListener("click", () => {
+    const isLight = root.getAttribute("data-theme") === "light";
+    if (isLight) {
+      root.removeAttribute("data-theme");
+      try { localStorage.setItem(STORE, "dark"); } catch(e) {}
+    } else {
+      root.setAttribute("data-theme", "light");
+      try { localStorage.setItem(STORE, "light"); } catch(e) {}
+    }
+  });
 })();
 </script>
 </body>
