@@ -297,6 +297,7 @@
 # if __name__ == "__main__":
 #     import uvicorn
 #     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
+
 import os
 import io
 import random
@@ -308,20 +309,24 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 
+# Custom utility imports from your project
 from utils.model_loader import load_model
 from utils.preprocessing import preprocess
 from utils.inference import run_ensemble
 from sanity_check_models import run_sanity_check
 
 # ─────────────────────────────────────────
-# Device & Model Config
+# 1. Configuration & Device Setup
 # ─────────────────────────────────────────
+# Automatically detects if GPU is available (Render free tier will use CPU)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# Relative paths assuming main.py is in 'cataract_detection_exp/'
 MODEL_A_PATH  = "models/modelA.pth"
 MODEL_B1_PATH = "models/modelB1.pth"
 MODEL_B2_PATH = "models/modelB2.pth"
 
+# Calibrated probability thresholds
 ZONE_1_MAX  = 0.08
 ZONE_2A_MAX = 0.10
 ZONE_2B_MAX = 0.12
@@ -335,29 +340,38 @@ DEMO_FOLDERS = {
 }
 
 # ─────────────────────────────────────────
-# Startup
+# 2. Startup Logic (Run Once)
 # ─────────────────────────────────────────
+# Verify Git LFS files and run model architecture checks
 run_sanity_check()
 
 for p in [MODEL_A_PATH, MODEL_B1_PATH, MODEL_B2_PATH]:
     if not os.path.exists(p):
-        raise RuntimeError(f"Model file missing: {p}")
+        raise RuntimeError(f"Critical Error: Model file missing at {p}. Check Git LFS status.")
 
+# Load models into memory once at startup to keep the API fast
 modelA  = load_model(MODEL_A_PATH,  device)
 modelB1 = load_model(MODEL_B1_PATH, device)
 modelB2 = load_model(MODEL_B2_PATH, device)
 
-app = FastAPI(title="CataractNet API", version="1.0.0")
+# ─────────────────────────────────────────
+# 3. FastAPI App & Middleware
+# ─────────────────────────────────────────
+app = FastAPI(
+    title="CataractNet API",
+    description="Calibrated deep-learning ensemble for cataract screening.",
+    version="1.0.0"
+)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"], # Allows your HTML file to talk to the API
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # ─────────────────────────────────────────
-# Schemas
+# 4. Schemas & Shared Logic
 # ─────────────────────────────────────────
 class PredictResponse(BaseModel):
     assessment:        str
@@ -372,110 +386,121 @@ class PredictResponse(BaseModel):
     disclaimer:        str
     sample_image_b64:  str = ""
 
-# ─────────────────────────────────────────
-# Logic Helpers
-# ─────────────────────────────────────────
 def _classify(p_nc: float, p_iol: float, p_natural: float) -> dict:
+    """Converts raw model probabilities into clinical assessments."""
     p_cat = 1.0 - p_nc
 
+    # Severity Classification
     if p_nc <= ZONE_1_MAX:
         assessment, zone, color = "Cataract Present", "Strong Cataract Signal", "#ef4444"
-        note = "Clear imaging evidence of cataract is detected."
+        note = "Clear imaging evidence of cataract is detected. Lens opacity patterns are consistent with clinically significant cataract."
         action = "Ophthalmologic evaluation recommended."
     elif ZONE_1_MAX < p_nc < ZONE_2A_MAX:
         assessment, zone, color = "Likely Early (Immature) Cataract", "Early Signal Zone", "#f97316"
-        note = "Imaging patterns suggest early or immature cataract formation."
+        note = "Imaging patterns suggest early or immature cataract formation. Structural lens changes are present but not advanced."
         action = "Routine monitoring or clinical correlation advised."
     elif ZONE_2A_MAX <= p_nc < ZONE_2B_MAX:
         assessment, zone, color = "Likely Non-Cataract (Early Overlap)", "Overlap / Monitoring Zone", "#f59e0b"
-        note = "No definitive cataract detected. Subtle patterns may overlap with early features."
+        note = "No definitive cataract detected. Subtle lens patterns may overlap with very early cataract features."
         action = "Monitoring recommended if symptoms develop."
     else:
         assessment, zone, color = "No Cataract Detected", "Clear Non-Cataract Zone", "#10b981"
-        note = "Lens appearance is consistent with a healthy lens."
+        note = "Lens appearance is consistent with a healthy lens. No imaging evidence of cataract is observed."
         action = "No immediate follow-up required."
 
+    # Lens Type Classification
     if p_iol >= 0.75:
-        l_type, l_note = "Intraocular Lens (IOL) Detected", "High-confidence detection of post-surgical IOL."
+        l_type, l_note = "Intraocular Lens (IOL) Detected", "High-confidence detection of post-surgical intraocular lens."
     elif 0.60 <= p_iol < 0.75:
         l_type, l_note = "Possible Intraocular Lens", "Moderate confidence of post-surgical lens features."
     else:
         l_type, l_note = "Natural Lens", "Lens appearance consistent with native crystalline lens."
 
-    return dict(
-        assessment=assessment, note=note, suggested_action=action,
-        lens_type=l_type, lens_note=l_note,
-        confidence_dist={"Cataract": round(p_cat, 4), "No Cataract": round(p_nc, 4)},
-        lens_probs={"IOL": round(p_iol, 4), "Natural": round(p_natural, 4)},
-        zone=zone, zone_color=color,
-        disclaimer="Research and educational use only. Always consult an ophthalmologist."
-    )
+    return {
+        "assessment": assessment, "note": note, "suggested_action": action,
+        "lens_type": l_type, "lens_note": l_note,
+        "confidence_dist": {"Cataract": round(p_cat, 4), "No Cataract": round(p_nc, 4)},
+        "lens_probs": {"IOL": round(p_iol, 4), "Natural": round(p_natural, 4)},
+        "zone": zone, "zone_color": color,
+        "disclaimer": "Research and educational use only. Not a diagnostic or clinical medical device."
+    }
 
-def _get_inference_data(img: Image.Image) -> dict:
+def _run_inference(img: Image.Image) -> dict:
+    """Preprocesses image and runs the ensemble model."""
     img_224, img_256 = preprocess(img)
     result = run_ensemble(img_224, img_256, modelA, modelB1, modelB2, device)
     return _classify(float(result["severity_probs"][0]), float(result["lens_probs"][0]), float(result["lens_probs"][1]))
 
 # ─────────────────────────────────────────
-# Routes
+# 5. API Routes
 # ─────────────────────────────────────────
 
 @app.get("/", include_in_schema=False)
-async def read_index():
+async def serve_home():
+    # Serves the main webpage from the parent directory
     return FileResponse('../model.html')
 
 @app.get("/index_detailed.html", include_in_schema=False)
-async def read_technical_report():
+async def serve_technical_report():
     return FileResponse('../index_detailed.html')
 
 @app.get("/health")
-def health():
+def health_check():
+    """Endpoint for Render health checks and keep-alive pings."""
     return {"status": "ok", "device": str(device)}
 
 @app.post("/predict", response_model=PredictResponse)
-async def predict(file: UploadFile = File(...)):
+async def predict_upload(file: UploadFile = File(...)):
+    """Handles manual user uploads."""
     if not file.content_type.startswith("image/"):
-        raise HTTPException(status_code=400, detail="Must be an image.")
+        raise HTTPException(status_code=400, detail="Uploaded file must be an image.")
     raw = await file.read()
     img = Image.open(io.BytesIO(raw)).convert("RGB")
-    return PredictResponse(**_get_inference_data(img))
+    return PredictResponse(**_run_inference(img))
 
 @app.get("/demo", response_model=PredictResponse)
-def demo(response: Response, category: str = Query(..., description="Demo category name")):
-    # 1. Prevent Browser Caching
+def demo_random(response: Response, category: str = Query(..., description="Category from DEMO_FOLDERS")):
+    """
+    RE-SCANNING DEMO LOGIC: 
+    Lists files on every request to ensure true randomness and prevents repeat images.
+    """
+    # Force the browser not to cache this result
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "0"
 
     if category not in DEMO_FOLDERS:
-        raise HTTPException(status_code=400, detail="Invalid category")
+        raise HTTPException(status_code=400, detail="Invalid demo category.")
 
     folder_path = os.path.join(DEMO_BASE, DEMO_FOLDERS[category])
     if not os.path.isdir(folder_path):
-        raise HTTPException(status_code=500, detail="Demo folder missing")
+        raise HTTPException(status_code=500, detail=f"Demo folder missing: {folder_path}")
 
-    # 2. Pick a truly random file
+    # Re-scan directory every time for randomness
     images = [f for f in os.listdir(folder_path) if f.lower().endswith((".jpg", ".jpeg", ".png"))]
     if not images:
-        raise HTTPException(status_code=500, detail="No images in folder")
+        raise HTTPException(status_code=500, detail="No valid images found in the selected folder.")
 
     img_path = os.path.join(folder_path, random.choice(images))
     img = Image.open(img_path).convert("RGB")
-
-    # 3. Run Inference
-    data = _get_inference_data(img)
-
-    # 4. Encode image for display
+    
+    # Run inference and encode image for frontend preview
+    fields = _run_inference(img)
     buf = io.BytesIO()
     img.save(buf, format="JPEG", quality=85)
-    data["sample_image_b64"] = base64.b64encode(buf.getvalue()).decode("utf-8")
+    fields["sample_image_b64"] = base64.b64encode(buf.getvalue()).decode("utf-8")
 
-    return PredictResponse(**data)
+    return PredictResponse(**fields)
 
 @app.get("/demo/categories")
-def demo_categories():
+def get_categories():
     return {"categories": list(DEMO_FOLDERS.keys())}
 
+# ─────────────────────────────────────────
+# 6. Entry Point
+# ─────────────────────────────────────────
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
+    # Using dynamic port for Render deployment compatibility
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
