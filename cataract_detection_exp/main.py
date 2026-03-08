@@ -443,7 +443,10 @@ async def serve_home():
 @app.get("/index_detailed.html", include_in_schema=False)
 async def serve_technical_report():
     return FileResponse('../index_detailed.html')
-
+@app.get("/image.png", include_in_schema=False)
+async def serve_image():
+   
+    return FileResponse('../image.png')
 @app.get("/health")
 def health_check():
     """Endpoint for Render health checks and keep-alive pings."""
